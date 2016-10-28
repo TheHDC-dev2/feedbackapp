@@ -1,0 +1,73 @@
+<div data-role="view" data-title="Feedback Form" data-layout="main" data-model="app.feedbackformView" data-show="app.feedbackformView.onShow"
+     data-after-show="app.feedbackformView.afterShow" id="feedbackformViewScreen" class="screen">
+    <header data-role="header" class="km-header" id="headerquestion"></header>
+    <footer data-role="footer">  
+        <input id="hdncustomer_test_info_id" value="" type="hidden" />
+        <span id="spanquestionnumber"> </span> 
+        <input id="hdnquestion_type" value="" type="hidden" />
+        <input id="hdnquestion_master_id" value="" type="hidden" />
+        <div class="text-center">
+            <!--<a data-role="button" id="btnprevious" class="km-primary hbutton" data-bind="events:
+             { click: gotoprevious }">Previous</a>-->
+            <a data-role="button" id="btnnext" class="km-primary hbutton" data-bind="events:
+             { click: gotonext }">Next</a>
+        </div>
+    </footer> 
+    <div id="feedbackformViewModel">
+        <div id="dvemailaddress"  style="display:none">
+            <input type="email" id="txtmailaddres" placeholder="radhakrishnan.j@himalayawellness.com" value="abc@sdasd.com" class="textinput" />
+        </div>
+
+        <div id="dvtextsingleline" style="display:none">
+            <input type="text" id="textsingleline" value="A" class="textinput" />
+        </div>
+
+        <div id="dvtextmultiline" style="display:none">
+            <textarea type="text" id="textmultiline"  class="textinput">ta</textarea>
+        </div>
+
+        <div id="dvwebsiteurl" style="display:none">
+            <input type="url" id="txtwebsiteurl"  placeholder="www.himalayastore.com"  value="http://www.asp.net" class="textinput" />
+        </div>
+
+        <div id="dvpincode"  style="display:none">
+            <input type="number" id="txtpincode" placeholder="562123" value="123456" class="textinput" />
+        </div>
+
+        <div id="dvmultichoice" style="display:none">
+            <input type="checkbox" name="0" class="check" value="A">
+            <label> A</label> <br>
+            <input type="checkbox" name="0" class="check" value="B">
+            <label> B</label><br>
+            <input type="checkbox" name="0" class="check" value="C">
+            <label> C</label><br>
+            <input type="checkbox" name="0" class="check" value="D">
+            <label> D</label><br>
+        </div>
+
+        <div id="dvsinglechoice" style="display:none">
+            <input type="radio" name="0" class="radio" value="A">
+            <label> A</label> <br>
+            <input type="radio" name="0" class="radio" value="B">
+            <label> B</label><br>
+            <input type="radio" name="0" class="radio" value="C">
+            <label> C</label><br>
+            <input type="radio" name="0" class="radio" value="D">
+            <label> D</label><br>
+        </div>
+
+        <div id="dvyesno" style="display:none">
+            <input type="radio" name="0" class="yesno" value="Yes"> Yes
+            <input type="radio" name="0" class="yesno" value="No"> No 
+        </div>
+
+        <div id="dvtruefalse"  style="display:none">
+            <input type="radio" name="0" class="truefalse" value="True"> True
+            <input type="radio" name="0" class="truefalse" value="False"> False
+        </div>
+        <!-- END_CUSTOM_CODE_feedbackformViewModel -->
+    </div>
+    <!-- START_CUSTOM_CODE_feedbackformView -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+    <!-- END_CUSTOM_CODE_feedbackformView -->
+</div>

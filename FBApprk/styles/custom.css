@@ -1,0 +1,504 @@
+/* Button Icons Start */
+
+.km-changepass-e:after, .km-changepass-e:before {
+    content: "\e0b1";
+}
+
+.km-feedback-e:after, .km-feedback-e:before {
+    content: "\e094";
+}
+
+.km-locator-e:after, .km-locator-e:before {
+    content: "\e0b4";
+    color: #ff6600;
+}
+
+.km-notification-e:after, .km-notification-e:before {
+    content: "\e0c2";
+    color: #ff6600;
+}
+
+.km-support-e:after, .km-support-e:before {
+    content: "\e319";
+    color: #ff6600;
+    background: #ff6600;
+}
+
+.km-shipping-e:after, .km-shipping-e:before {
+    content: "\e07a";
+    color: #ff6600;
+}
+
+.km-policy-e:after, .km-policy-e:before {
+    content: "\e0b2";
+    color: #ff6600;
+}
+
+.km-delete-e:after, .km-delete-e:before {
+    content: "\e221";
+    color: #666;
+    padding: 10px;
+}
+
+.km-phone-e:after, .km-phone-e:before {
+    content: "\e326";
+    font-size: 15px!important;
+    text-align: center!important;
+}
+
+.km-redeem-e:after, .km-redeem-e:before {
+    content: "\e0c4";
+}
+
+.km-trackorder-e:after, .km-trackorder-e:before {
+    content: "\f0d1";
+    font-size: 30px;
+    font-family: "fontawesome"!important;
+}
+
+.km-gift-e:after, .km-gift-e:before {
+    content: "\e20b";
+}
+
+.km-login-e:after, .km-login-e:before {
+    content: "\e0b1";
+}
+
+.km-Wishlist-e:after, .km-Wishlist-e:before {
+    content: "\e044";
+}
+
+.km-notifyicon-e:after, .km-notifyicon-e:before {
+    content: "\f0f3";
+    font-family: "fontawesome"!important;
+}
+
+.km-right-e:after, .km-right-e:before {
+    content: "\e316";
+}
+
+.km-pushnotify-e:after, .km-pushnotify-e:before {
+    content: "\e0b5";
+}
+
+.km-disablepushnotify-e:after, .km-disablepushnotify-e:before {
+    content: "\e0b5";
+    color: #666;
+}
+
+.km-up-e:after, .km-up-e:before {
+    content: "\e011";
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.km-down-e:after, .km-down-e:before {
+    content: "\e002";
+    font-size: 30px!important;
+    padding-right: 10px;
+}
+
+.km-arrow-e:after, .km-arrow-e:before {
+    content: "\e013";
+}
+
+.km-play-e:after, .km-play-e:before {
+    content: "\e013";
+}
+
+.km-up-e:after, .km-up-e:before {
+    content: "\e011";
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.km-down-e:after, .km-down-e:before {
+    content: "\e012";
+}
+
+.km-nova .km-details:after {
+    content: "\e217";
+    top: 3px;
+}
+
+.km-mail-e:after, .km-mail-e:before {
+    content: "\f003";
+    font-size: 2em!important;
+    font-family: "fontawesome"!important;
+    padding: 0px!important;
+    width: auto!important;
+    margin-left: -5px!important;
+}
+
+.km-phone-e:after, .km-phone-e:before {
+    content: "\f095";
+    font-size: 30px!important;
+    font-family: "fontawesome"!important;
+    padding: 1px 20px 10px 0px!important;
+}
+
+.km-help-e:after, .km-help-e:before {
+    content: "\f128";
+    font-size: 30px!important;
+    font-family: "fontawesome"!important;
+}
+
+.km-storelocator-e:after, .km-storelocator-e:before {
+    content: "\e0b4";
+    font-size: 25px!important;
+}
+
+.km-signout-e:after, .km-signout-e:before {
+    content: '\e0b3';
+}
+
+.km-rupees-e:after, .km-rupees-e:before {
+    content: "\f156";
+    font-size: 14px!important;
+    font-family: "fontawesome"!important;
+}
+
+.km-leftarrowcat-e:after, .km-leftarrowcat-e:before {
+    content: '\e21d';
+    height: 10px!important;
+    background: transparent!important;
+    border: 0px!important;
+    padding: 0px;
+}
+
+.km-rightarrowcat-e:after, .km-rightarrowcat-e:before {
+    content: '\e30e';
+    height: 10px!important;
+    background: transparent!important;
+    border: 0px!important;
+    padding: 0px;
+}
+
+.km-key-e:after, .km-key-e:before {
+    content: "\e0b1";
+    font-size: 2em;
+    color: #ff4350 !important;
+}
+
+.km-user-e:after, .km-user-e:before {
+    content: "\e319";
+    font-size: 2em;
+    color: #ff4350 !important;
+}
+
+.km-previous-e:after, .km-previous-e:before {
+    content: "\e003";
+    font-size: 2em;
+}
+
+.km-networkconnectionicon:after, .km-networkconnectionicon:before {
+    content: "\f1eb";
+    font-size: 100px !important;
+    font-family: "fontawesome"!important;
+}
+
+.km-close-e:after, .km-close-e:before {
+    content: "\e031";
+    font-size: 1.5em;
+    color: #ff4350 !important;
+}
+
+.km-speaker-e:after, .km-speaker-e:before {
+    content: "\e0b5";
+    font-size: 2em;
+    color: yellow!important;
+}
+
+.km-maincat-e:after, .km-maincat-e:before {
+     content: "\e0b5";
+    font-size: 7em !important ; 
+}
+
+.km-subcat-e:after, .km-subcat-e:before {
+     content: "\e0b1";
+    font-size: 4em !important ; 
+}
+/* Offline Form*/
+
+
+/* Offline Form*/
+
+
+/* Button Icons End */
+
+
+/* common error start */
+
+#dverrorbody {
+    border: 1px solid #666;
+}
+
+#dverrorbody li span {
+    width: 10%;
+}
+
+#dverrorbody li h3 {
+    width: 90%;
+    color: #cc4141;
+}
+
+
+/* common error End*/
+
+
+/* Form Inputs  Start*/
+
+.textinput {
+     font-size: 2em !important ;
+}
+
+.hbutton
+{
+     font-size: 2em !important ;
+}
+.liheight
+{
+    line-height:70px;
+}
+
+/* Form Inputs End*/
+
+/* login form Start*/
+
+#kendoUiMobileApp .signin-view .dvlogo {
+    text-align: center;
+    padding: 50px;
+}
+
+#kendoUiMobileApp .signin-view {
+    width: 90%;
+    margin: auto;
+}
+
+#kendoUiMobileApp .signin-view span {
+    width: 10%;
+}
+
+#kendoUiMobileApp .signin-view input {
+    width: 90%;
+}
+
+
+/* login form  End */
+
+
+/* feedback form start */
+
+#feedbackformViewScreen .km-header {
+    background-color: #fff !important;
+}
+
+#feedbackformViewScreen .km-header h1 {
+    background-color: #fff !important;
+    color: #ff6600 !important;
+    padding: 10px !important;
+}
+
+#feedbackformViewScreen .km-footer   {
+    background-color: #fff !important;
+    color: #ff6600 !important; 
+    margin:10px !important; 
+    padding:10px !important; 
+}
+
+
+/* feedback form   End */
+
+
+/* Cutome rk tag and class start */
+
+.paddingTopBottom-5 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.padding-10 {
+    padding: 10px 10px 10px !important;
+}
+
+.padding-20 {
+    padding: 20px 20px 20px !important;
+}
+
+.padding-25 {
+    padding: 25px 25px 25px !important;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.marginTopleftBottom-10 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    margin-left: 10px !important;
+}
+
+.marginTop-50 {
+    margin-top: 50px !important;
+}
+
+.marginTop-30 {
+    margin-top: 30px !important;
+}
+
+.marginTopBottom-10 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+small, .small {
+    font-size: 85%;
+}
+
+mark, .mark {
+    padding: .2em;
+    background-color: #fcf8e3;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-muted {
+    color: #777;
+}
+
+
+/* Cutome rk tag and class end */
+
+
+/* dashbaord view start */
+
+#dvdashboard , #dvstoredashboard {
+    text-align: center;
+    padding-top: 20%;
+}
+
+#dvdashboard .primary ,#dvstoredashboard .primary{
+    width: 150px !important;
+    height: 150px !important;
+    font-size: 32px;
+}
+
+
+/* dashbaord view end */
+
+
+/* cusotmer form view start */
+
+
+/* cusotmer form view end */
+
+/* Loading popup start */ 
+
+.km-ios #loading .km-content
+    {
+        background: transparent;
+    }
+
+    #loading .km-content
+    {
+        text-align: center;
+    }
+
+    #show
+    {
+        margin-top: 100px;
+        font-size: 1.2em;
+    }
+
+    /* Example Counter */
+    .km-meego h1.loaderHeading,
+    .km-blackberry h1.loaderHeading
+    {
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        width: 1em;
+        left: 50%;
+        height: 1em;
+        top: 50%;
+        font-size: 1.2rem;
+        margin: -.65em 0 0 -.5em;
+    }
+
+    .km-material h1.loaderHeading,
+    .km-flat h1.loaderHeading,
+    .km-android h1.loaderHeading,
+    .km-wp h1.loaderHeading
+    {
+        display: block;
+    }
+
+    .km-ios h1.loaderHeading
+    {
+    	font-size: 1rem;
+    }
+    .km-meego h1.loaderHeading,
+    .km-blackberry h1.loaderHeading
+    {
+        font-size: 1.5rem;
+    }
+
+    .km-android-light h1.loaderHeading
+    {
+        color: #222;
+    }
+/* Loading popup end */ 
+
+

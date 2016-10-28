@@ -1,0 +1,92 @@
+<div data-role="view" data-title="Sub Category" data-layout="main" data-model="app.subcategory" data-show="app.subcategory.onShow"
+     data-after-show="app.subcategory.afterShow" id="subcategoryScreen" class="screen">
+    <!-- START_CUSTOM_CODE_thankyou -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+     
+    <header data-role="header" class="km-header"> 
+        
+         <div class="button-group">
+            <a data-role="backbutton" class="primary" data-align="right">Back </a>
+            <a class="primary" data-role="button" href="components/dashboard/view.html"> Home</a>
+        </div>
+        <span id="headervalue">
+        </span> 
+    </header>
+    <div id="dv53" style="display:none">
+        <div class="button-group">
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="61"> Children's Health</a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="63">Derma Care</a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="69">General Health</a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="75">Men's Health</a>
+        </div>
+        <div class="button-group">
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="77"> Oral Health</a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="81"> Women's Health</a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="97"> Nutrition Health</a>
+
+        </div>
+    </div>
+    <div id="dv96" style="display:none">
+        <div class="button-group">
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="99">nutrition</a>
+        </div>
+    </div>
+    <div id="dv55" style="display:none">
+        <div class="button-group">
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="80">pure herbs</a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="68">general wellness</a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="98">nutrition</a>
+        </div>
+    </div>
+    <div id="dv54" style="display:none">
+        <div class="button-group">
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="60">body care</a>
+            <!--<a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="60">combo packs</a>-->
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="65">eye care</a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="66">face care</a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="71">hair care</a>
+
+        </div>
+        <div class="button-group">
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="73">lip packs</a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="74">men's care</a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="76">oral care</a>
+            <a></a>
+        </div>
+    </div>
+    <div id="dv106" style="display:none">
+        <div class="button-group">
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="107">body care</a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="108">Nursing care</a>
+            <a></a>
+            <a></a>
+        </div>
+    </div>
+    <div id="dv56" style="display:none">
+        <div class="button-group">
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="79">Pre-bath</a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="59">Bath </a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="78">Post-bath </a>
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="64">baby diapers </a>
+        </div>
+        <div class="button-group">
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="70">Baby Kits </a>
+            <a></a>
+            <a></a>
+            <a></a>
+        </div>
+    </div>
+    <div id="dv57" style="display:none">
+        <div class="button-group">
+            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="62">Companion</a>
+            <a></a>
+            <a></a>
+            <a></a>
+        </div>
+    </div>
+    <!--<div class="button-group">
+        <a data-role="button" class="primary hbutton" data-bind="events: { click: gotodashboard }">Home</a>
+        <a data-role="button" class="primary hbutton"  data-bind="events: { click: gotoretest}">Re-Test</a>
+    </div>-->
+    <!-- END_CUSTOM_CODE_thankyou -->
+</div>

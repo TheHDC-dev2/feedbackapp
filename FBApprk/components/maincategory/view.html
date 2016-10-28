@@ -1,0 +1,32 @@
+<div data-role="view" data-title="Main Categories" data-layout="main"
+     data-model="app.maincategory" data-show="app.maincategory.onShow"
+     data-after-show="app.maincategory.afterShow" id="maincategoryScreen" class="screen">
+
+    <!-- START_CUSTOM_CODE_thankyou -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+    <header data-role="header" class="km-header">
+        <div class="button-group">
+            <a class="primary" data-role="button" href="components/dashboard/view.html"> Back</a>
+            <a class="primary" data-role="button" href="components/dashboard/view.html"> Home</a>
+        </div> 
+    </header>
+    <div class="button-group">
+        <a class="primary km-icon km-maincat-e" data-role="button" onclick="gotosubcategory(this.id,this.name);" id="53" name="Pharmaceuticals"> Pharmaceuticals</a>
+        <a class="primary km-icon km-maincat-e" data-role="button" onclick="gotosubcategory(this.id,this.name);" id="96" name="Nutrition">Nutrition</a>
+        <a class="primary km-icon km-maincat-e" data-role="button" onclick="gotosubcategory(this.id,this.name);" id="55" name="Wellness">Wellness</a>
+        <a class="primary km-icon km-maincat-e" data-role="button" onclick="gotosubcategory(this.id,this.name);" id="54" name="Personal Care">Personal Care</a>
+    </div>
+    <div class="button-group">
+        <a class="primary km-icon km-maincat-e" data-role="button" onclick="gotosubcategory(this.id,this.name);" id="106" name="HIMALAYA FOR MOMS">HIMALAYA FOR MOMS</a>
+        <a class="primary km-icon km-maincat-e" data-role="button" onclick="gotosubcategory(this.id,this.name);" id="56" name="BABY CARE">BABY CARE</a>
+        <a class="primary km-icon km-maincat-e" data-role="button" onclick="gotosubcategory(this.id,this.name);" id="57" name="ANIMAL CARE">ANIMAL CARE</a>
+        <a>
+        </a>
+    </div>
+
+    <!--<div class="button-group">
+        <a data-role="button" class="primary hbutton" data-bind="events: { click: gotodashboard }">Home</a>
+        <a data-role="button" class="primary hbutton"  data-bind="events: { click: gotoretest}">Re-Test</a>
+    </div>-->
+    <!-- END_CUSTOM_CODE_thankyou -->
+</div>
