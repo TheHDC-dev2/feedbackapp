@@ -5,7 +5,7 @@ app.home = kendo.observable({
         app_dbinit();
     },
     afterShow: function () {
-        //$('#btnsignin').removeClass('loaderHeading'); 
+        
     },
 
     checksignin: function () { 
@@ -20,10 +20,8 @@ app.home = kendo.observable({
             $("#modalview-error").kendoMobileModalView("open");
         }
         else { 
-            // check username and password in db  
-            //$('#btnsignin').hide();
-            fun_checkstoreinfo(username, password);
-            //$('#btnsignin').show();
+            // check username and password in db   
+            fun_checkstoreinfo(username, password); 
         }
     }
 });
@@ -37,7 +35,7 @@ function fun_checkstoreinfo(username, password) {
     var storelogin = new kendo.data.DataSource({
         transport: {
             read: {
-                url: "https://api.everlive.com/v1/hdqghlo0hh1fhobk/Invoke/SqlProcedures/USP_Mobile_Select_Survey_Login",
+                url: "https://api.everlive.com/v1/zn4pzp5j7joaj6hq/Invoke/SqlProcedures/USP_Mobile_LoginCheck_GetTestDetailsByStoreId_GetProductDetails",
                 type: "POST",
                 dataType: "json",
                 data: {
@@ -47,30 +45,65 @@ function fun_checkstoreinfo(username, password) {
         },
         schema: {
             parse: function (response) {
-                var getstorelogin = response.Result.Data[0]; 
+                var getstorelogin = response.Result.Data; 
                 return getstorelogin;
             }
         }
     });
-    startLoading();
+    
+    $("#btnsignin").hide();
+    $("#dvstartsigninprocess").show(); 
     storelogin.fetch(function () {
-        var data = this.data();
-        
-        if (parseInt(data[0].STORE_MASTER_ID) > 0) {
-           // alert(data[0].STORE_MASTER_ID);
-            localStorage.setItem("storeid", data[0].STORE_MASTER_ID);
+        var data = this.data(); 
+        if (parseInt(data[0][0].STORE_MASTER_ID) > 0) { 
+            $("#btnsignin").show();
+            $("#dvstartsigninprocess").hide();
+            localStorage.setItem("storeid", data[0][0].STORE_MASTER_ID); //store details 
+            fun_checktestinfo(data[1]);//test details 
+            getallproductdetails(data[2]); // product detalils 
             //redirect dashboard page 
             app.mobileApp.navigate("components/storedashboard/view.html");
         }
-        else {
-           // alert(data[0].STORE_MASTER_ID);
+        else { 
+            $("#btnsignin").show();
+            $("#dvstartsigninprocess").hide();
             localStorage.setItem("storeid", 0);
             $("#h3errormessage").html('Invalid credentials!');
             $("#modalview-error").kendoMobileModalView("open");
-        }
-        hideLoader();
+        } 
     });
    
+}
+
+
+function fun_checktestinfo(data) {
+    if (data[0].TEST_ID > 0) {
+        var objdistincttest = Enumerable
+            .From(data)
+            .Select("$.TEST_ID")
+            .Distinct().ToArray();
+        // Assigining distinct testdetails in local
+        localStorage.setItem("distincttestdetails", JSON.stringify(objdistincttest));
+
+        // Assigining testdetails in local
+        localStorage.setItem("testdetails", JSON.stringify(data));
+        // Assigining distinct question in local
+        var objdistinctquestions = Enumerable
+            .From(data)
+            .Select("$.QUESTION_MASTER_ID")
+            .Distinct().ToArray();
+        localStorage.setItem("distinctquestions", JSON.stringify(objdistinctquestions));
+        localStorage.setItem("testid", data[0].TEST_ID);
+    }
+    else {
+        localStorage.setItem("testid", 0);
+    }
+}
+
+function getallproductdetails(data) {
+    var fileSystemHelper = new FileSystemHelper();
+    var fileName = "himalayaproductdetails.txt";
+    fileSystemHelper.writeLine(fileName, JSON.stringify(data), app.onSuccess, app.onError);
 }
 
 // END_CUSTOM_CODE_homeModel

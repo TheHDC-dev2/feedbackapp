@@ -1,29 +1,26 @@
-<div data-role="view" data-reload="true" data-title="producttag" data-layout="main" data-model="app.producttag" data-show="app.producttag.onShow"
+<div data-role="view" data-reload="true" data-title="producttag" data-layout="product-layout"
+     data-model="app.producttag" data-show="app.producttag.onShow"
      data-after-show="app.producttag.afterShow" id="producttagScreen" class="screen">
     <!-- START_CUSTOM_CODE_thankyou -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-    <header data-role="header" class="km-header"> 
-        <div class="button-group">
-            <a data-role="backbutton" class="primary" data-align="right">Back </a>
-            <a class="primary" data-role="button" href="components/dashboard/view.html"> Home</a>
-        </div> 
-        <span id="headervalue"></span>
+    <header data-role="header" class="km-header">
+        <a data-role="backbutton" class="quarter-circle-left"> B A C K</a>
+        <a class="quarter-circle-right" data-role="button" onclick="redirecttocustomerdashboard();"> H O M E</a>
+        <h1 id="headermainvalueproducttag" class="h1orange" style="padding-left:163px;"></h1>
+        <h3 id="headersubvalueproducttag" class="h3orange" style="padding-left:163px;"></h3>
     </header>
-    <ul id="filterable-listview"></ul>
-    <span id="ccategory" style="display:none"> </span>
+    <div class="container">
+        <div class="main">
+            <ul class="cbp-ig-grid" id="producttag-listview"></ul>
+        </div>
+    </div>
     <script type="text/x-kendo-tmpl" id="template-productlist">
-        <a onclick="gotoproductdetail(this.id);" id="#=catalogid#">
-            <img src="#=thumbnail#" alt="#=thumbnail# image" class="km-thumbnail" />
-            <h2>#:cname# #:featurename# </h2>
-            <p>#:allowusertext#   </p>
+        <a href="\#components/producttag/details.html?catalogid=${catalogid}&categoryid=${Categoryid}">
+            <img class="lazy" data-original="#=thumbnail#" alt="#=thumbnail# image" />
+            <span></span>
+            <h2 class="cbp-ig-title">#:cname# </h2>
+            <p class="cbp-ig-category"> #:allowusertext# </p>
         </a>
     </script>
-    <!--<div data-role="view" data-init="mobileListViewFiltering" data-title="Scroll down to load">
-
-    </div>-->
-    <!--<div class="button-group">
-        <a data-role="button" class="primary hbutton" data-bind="events: { click: gotodashboard }">Home</a>
-        <a data-role="button" class="primary hbutton"  data-bind="events: { click: gotoretest}">Re-Test</a>
-    </div>-->
     <!-- END_CUSTOM_CODE_thankyou -->
 </div>

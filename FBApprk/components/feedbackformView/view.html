@@ -1,70 +1,82 @@
-<div data-role="view" data-title="Feedback Form" data-layout="main" data-model="app.feedbackformView" data-show="app.feedbackformView.onShow"
+<div data-role="view" data-title="Feedback Form" data-layout="main" 
+     data-model="app.feedbackformView" data-show="app.feedbackformView.onShow"
      data-after-show="app.feedbackformView.afterShow" id="feedbackformViewScreen" class="screen">
-    <header data-role="header" class="km-header" id="headerquestion"></header>
-    <footer data-role="footer">  
-        <input id="hdncustomer_test_info_id" value="" type="hidden" />
-        <span id="spanquestionnumber"> </span> 
-        <input id="hdnquestion_type" value="" type="hidden" />
-        <input id="hdnquestion_master_id" value="" type="hidden" />
-        <div class="text-center">
-            <!--<a data-role="button" id="btnprevious" class="km-primary hbutton" data-bind="events:
-             { click: gotoprevious }">Previous</a>-->
-            <a data-role="button" id="btnnext" class="km-primary hbutton" data-bind="events:
-             { click: gotonext }">Next</a>
-        </div>
-    </footer> 
+    <header data-role="header" class="km-header">
+        <h1 id="headerquestion"></h1>
+    </header>  
+    <footer data-role="footer">   
+        <div class="marginTopBottom-10">
+            <div class="dvquestionnumber">
+                #<span id="spanquestionnumber"></span>
+            </div>
+            <div class="hbutton-green" id="btnnext"
+                 data-bind="events: { click: gotonext }">Next</div>
+            </div>
+    </footer>
     <div id="feedbackformViewModel">
-        <div id="dvemailaddress"  style="display:none">
-            <input type="email" id="txtmailaddres" placeholder="radhakrishnan.j@himalayawellness.com" value="abc@sdasd.com" class="textinput" />
+        <div id="dvemailaddress" style="display:none">
+            <input type="email" id="txtmailaddres"  placeholder="Enter email here"  value ="radhakrishnan.j@himalayawellness.com" />
         </div>
 
         <div id="dvtextsingleline" style="display:none">
-            <input type="text" id="textsingleline" value="A" class="textinput" />
+            <input type="text" id="textsingleline" value="A"   placeholder="Enter your answer here" />
         </div>
 
         <div id="dvtextmultiline" style="display:none">
-            <textarea type="text" id="textmultiline"  class="textinput">ta</textarea>
+            <textarea type="text" id="textmultiline" placeholder="Enter your answer in detail here"  >ta</textarea>
         </div>
 
         <div id="dvwebsiteurl" style="display:none">
-            <input type="url" id="txtwebsiteurl"  placeholder="www.himalayastore.com"  value="http://www.asp.net" class="textinput" />
+            <input type="url" id="txtwebsiteurl" placeholder="Enter url here" value="http://www.asp.net"   />
         </div>
 
-        <div id="dvpincode"  style="display:none">
-            <input type="number" id="txtpincode" placeholder="562123" value="123456" class="textinput" />
+        <div id="dvpincode" style="display:none">
+            <input type="number" id="txtpincode" onkeyup="return textinputlength(this.value, 6, this.id);" placeholder="Enter pin code here" value="562162"   />
         </div>
 
         <div id="dvmultichoice" style="display:none">
-            <input type="checkbox" name="0" class="check" value="A">
-            <label> A</label> <br>
-            <input type="checkbox" name="0" class="check" value="B">
-            <label> B</label><br>
-            <input type="checkbox" name="0" class="check" value="C">
-            <label> C</label><br>
-            <input type="checkbox" name="0" class="check" value="D">
-            <label> D</label><br>
+            <div class="note pull-right">Note : You can select more than one option(s). </div>
+           
+            <input type="checkbox" id="chk1" name="chk" value="A">
+            <label for="chk1">A</label><br/>
+            <input type="checkbox" id="chk2" name="chk" value="B">
+            <label for="chk2">B</label>
+            <input type="checkbox" id="chk3" name="chk" value="C">
+            <label for="chk3">C </label>
+            <input type="checkbox" id="chk4" name="chk" value="D">
+            <label for="chk4">D  </label>
+
         </div>
 
         <div id="dvsinglechoice" style="display:none">
-            <input type="radio" name="0" class="radio" value="A">
-            <label> A</label> <br>
-            <input type="radio" name="0" class="radio" value="B">
-            <label> B</label><br>
-            <input type="radio" name="0" class="radio" value="C">
-            <label> C</label><br>
-            <input type="radio" name="0" class="radio" value="D">
-            <label> D</label><br>
+            <div class="mandatory pull-right">&nbsp; </div> 
+            <input type="radio" id="chk1" name="chk" value="A">
+            <label for="chk1">A</label><br />
+            <input type="radio" id="chk2" name="chk" value="B">
+            <label for="chk2">B</label>
+            <input type="radio" id="chk3" name="chk" value="C">
+            <label for="chk3">C </label>
+            <input type="radio" id="chk4" name="chk" value="D">
+            <label for="radio">D  </label>
         </div>
 
-        <div id="dvyesno" style="display:none">
-            <input type="radio" name="0" class="yesno" value="Yes"> Yes
-            <input type="radio" name="0" class="yesno" value="No"> No 
+        <div id="dvyesno" style="display:none"> 
+            <input type="radio" id="radioyes" name="yesno" value="Yes">
+            <label for="radioyes" class="green">Yes</label>
+            &nbsp; 
+            <input type="radio" id="radiono" name="yesno" value="No">
+            <label for="radiono" class="red">No</label> 
         </div>
 
-        <div id="dvtruefalse"  style="display:none">
-            <input type="radio" name="0" class="truefalse" value="True"> True
-            <input type="radio" name="0" class="truefalse" value="False"> False
+        <div id="dvtruefalse" style="display:none"> 
+            <input type="radio" id="radiotrue" name="truefalse" value="True">
+            <label for="radiotrue" class="green">True</label>
+            <input type="radio" id="radiofalse" name="truefalse" value="False">
+            <label for="radiofalse" class="red">False</label> 
         </div>
+        <input id="hdncustomer_test_info_id" value="" type="hidden" />
+        <input id="hdnquestion_type" value="" type="hidden" />
+        <input id="hdnquestion_master_id" value="" type="hidden" /> 
         <!-- END_CUSTOM_CODE_feedbackformViewModel -->
     </div>
     <!-- START_CUSTOM_CODE_feedbackformView -->

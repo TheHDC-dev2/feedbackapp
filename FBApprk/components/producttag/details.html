@@ -1,0 +1,28 @@
+<div data-role="view" data-reload="true" data-title="productdetail" data-layout="product-layout" 
+     data-model="app.productdetail" data-show="app.productdetail.onShow"
+     data-after-show="app.productdetail.afterShow" id="productdetailScreen" class="screen">
+     
+    
+    <!-- START_CUSTOM_CODE_thankyou -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+    <header data-role="header" class="km-header">
+        <a data-role="backbutton" class="quarter-circle-left"> B A C K</a>
+        <a class="quarter-circle-right" data-role="button" onclick="redirecttocustomerdashboard();"> H O M E</a>
+        <h1 id="headermainvalueproductdetails" class="h1orange" style="padding-left:163px;"></h1>
+        <h3 id="headersubvalueproductdetails" class="h3orange" style="padding-left:163px;"></h3>
+    </header>
+    <ul id="productdetail-listview"></ul>
+    <script type="text/x-kendo-tmpl" id="template-productdetail"> 
+        <div id="divOuter" class="outerdiv-details">
+            <img src="#: detail_image #" style="float:left;"  />
+             <div >
+                <h3>#: cname #</h3>
+                <span class="tagline">#: allowusertext #</span>
+            </div>
+            <div class="productcontentClass" > 
+                    #= extendeddesc # 
+            </div>
+        </div>  
+    </script>  
+    <!-- END_CUSTOM_CODE_thankyou   -->
+</div>

@@ -4,9 +4,7 @@ app.storedashboard = kendo.observable({
     onShow: function () {
        
     },
-    afterShow: function () {  
-        app.createtablecustomer();
-        app.createtablecustomerqa();
+    afterShow: function () {   
         var rendercustomertestdetail = function (tx, rs) {
             var valcustomertestdetail_string = []; 
             for (var i = 0; i < rs.rows.length; i++) {
@@ -27,62 +25,30 @@ app.storedashboard = kendo.observable({
     },
     gotostart: function () {
         // redirect to customer dashboard  
-        app.mobileApp.navigate("components/dashboard/view.html");
+        app.mobileApp.navigate("components/customerdashboard/view.html");
     },
     pushtodb: function () {
-        // push to all customer and its QA to Db
-        // 14 empty in app and 4 empty in appbilder 
-        //alert($("#hdnvalcustomertestdetail_string").val());
-        if ($("#hdnvalcustomertestdetail_string").val().length == 0 || $("#hdnvalcustomertestdetail_string").val()=="[]") {
+        $('#dvstartsync').hide();
+        $('#dvstartsyncprocess').show();
+        if ($("#hdnvalcustomertestdetail_string").val().length == 0
+            || $("#hdnvalcustomertestdetail_string").val() == "[]") {
             $("#h3errormessage").html("There is no record to sync!");
-            $("#modalview-error").kendoMobileModalView("open"); 
+            $("#modalview-error").kendoMobileModalView("open");
+            $('#dvstartsync').show();
+            $('#dvstartsyncprocess').hide();
         }
-        else {
-            //alert(1);
+        else { 
+            // push to all customer and its QA to Db
             pushalldatatodb();
         } 
     }
 });
-
-
-function getallproductdetails() {
-
-
-    try {
-         var fileSystemHelper = new FileSystemHelper();
-        var fileName = "rkproductdetails.txt"; 
-        var productfulllist = new kendo.data.DataSource({
-            transport: {
-                read: {
-                    url: "https://api.everlive.com/v1/hdqghlo0hh1fhobk/Invoke/SqlProcedures/USP_Mobile_Get_ProductDetails",
-                    type: "POST",
-                    dataType: "json",
-                    data: JSON.stringify({ "key": "value" })
-                }
-            },
-            schema: {
-                parse: function (response) {
-                    var productinfo = response.Result.Data[0];
-                    return productinfo;
-                }
-            }
-        });
-        productfulllist.fetch(function () {
-             var data = this.data();
-            fileSystemHelper.writeLine(fileName, JSON.stringify(data), app.onSuccess, app.onError);
-           
-        });
-    }
-    catch (err) {
-        console.log("Trigger for Product Update : " + err);
-    }
-}
-
+ 
 function pushalldatatodb() { 
     var pushtestdetails = new kendo.data.DataSource({
         transport: {
             read: {
-                url: "https://api.everlive.com/v1/hdqghlo0hh1fhobk/Invoke/SqlProcedures/USP_Mobile_Insert_Customer_Test_Details",
+                url: "https://api.everlive.com/v1/zn4pzp5j7joaj6hq/Invoke/SqlProcedures/USP_Mobile_Insert_Customer_Test_Details",
                 type: "POST",
                 dataType: "json",
                 data: {
@@ -97,9 +63,9 @@ function pushalldatatodb() {
                 return pushtestdata;
             }
         }
-    });
-    startLoading();
+    }); 
     pushtestdetails.fetch(function () {
+
         var data = this.data();
         if (data[0].Result_Status == "1") {
             // to detele
@@ -108,18 +74,17 @@ function pushalldatatodb() {
             $("#h3successmessage").html(data[0].Result_String);
             $("#modalview-success").kendoMobileModalView("open");
             $("#hdnvalcustomertestdetail_string").val('');
-            $("#hdvalcustomerqadetail_string").val(''); 
-            getallproductdetails();
-            success
+            $("#hdvalcustomerqadetail_string").val('');  
         }
         else { 
             $("#h3errormessage").html(data[0].Result_String);
             $("#modalview-error").kendoMobileModalView("open");
             adderrorlog(localStorage.getItem('storeid'),
                 localStorage.getItem('testid'), data[0].Result_String, data[0].ErrorMessage);
-        }
-
-        hideLoader();
+        } 
+        $('#dvstartsync').show();
+        $('#dvstartsyncprocess').hide(); 
+        
     });
 }
 
@@ -127,7 +92,7 @@ function adderrorlog(store_master_id, test_id, errorkey, errormessage) {
     var errorlogds = new kendo.data.DataSource({
         transport: {
             read: {
-                url: "https://api.everlive.com/v1/hdqghlo0hh1fhobk/Invoke/SqlProcedures/USP_Mobile_Upsert_ErrorLog",
+                url: "https://api.everlive.com/v1/zn4pzp5j7joaj6hq/Invoke/SqlProcedures/USP_Mobile_Upsert_ErrorLog",
                 type: "POST",
                 dataType: "json",
                 data: {

@@ -1,317 +1,1079 @@
-/* Button Icons Start */
 
-.km-changepass-e:after, .km-changepass-e:before {
-    content: "\e0b1";
-}
 
-.km-feedback-e:after, .km-feedback-e:before {
-    content: "\e094";
-}
+/* details page style start */
 
-.km-locator-e:after, .km-locator-e:before {
-    content: "\e0b4";
-    color: #ff6600;
-}
-
-.km-notification-e:after, .km-notification-e:before {
-    content: "\e0c2";
-    color: #ff6600;
-}
-
-.km-support-e:after, .km-support-e:before {
-    content: "\e319";
-    color: #ff6600;
+.othersize a{
+    color:#fff!important;
     background: #ff6600;
+    border: 0px solid #fff;
+    padding:5px;
+    line-height:33px;
 }
 
-.km-shipping-e:after, .km-shipping-e:before {
-    content: "\e07a";
-    color: #ff6600;
+.outer-incdec {
+    float: left;
+    margin-top: -30px;
+    padding-right: 15px;
 }
 
-.km-policy-e:after, .km-policy-e:before {
-    content: "\e0b2";
-    color: #ff6600;
+.outerdiv-details > div {
+    margin: auto;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-family: "HimalayaFont"!important;
+    font-size: 200%;
 }
 
-.km-delete-e:after, .km-delete-e:before {
-    content: "\e221";
-    color: #666;
-    padding: 10px;
+.outerdiv-details h3{
+    font-size:16px!important;
+     font-size: 103% !important;
 }
 
-.km-phone-e:after, .km-phone-e:before {
-    content: "\e326";
-    font-size: 15px!important;
-    text-align: center!important;
+#kendoUiMobileApp .tagline {
+    color: #aeaeae;
+    display: block;
+    font-style: italic;
+    font-size: 18px;
+    /*font-size: 101%;*/
 }
 
-.km-redeem-e:after, .km-redeem-e:before {
-    content: "\e0c4";
+#kendoUiMobileApp .km-view .divOuter-details div {
+    margin: auto;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
 
-.km-trackorder-e:after, .km-trackorder-e:before {
-    content: "\f0d1";
-    font-size: 30px;
-    font-family: "fontawesome"!important;
+#divOuter{
+    margin-top:-20px;
+}
+#kendoUiMobileApp .Detail-outer-incDec {
+    float: right;
+    margin-top: -30px;
+    padding-right: 15px;
+    font-family: "HimalayaFont"!important;
 }
 
-.km-gift-e:after, .km-gift-e:before {
-    content: "\e20b";
+#kendoUiMobileApp .Green-Circle {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #eeeeee;
+    background-color: #ff6600;
 }
 
-.km-login-e:after, .km-login-e:before {
-    content: "\e0b1";
+#kendoUiMobileApp .padding-20 {
+    padding-top: 20px;
 }
 
-.km-Wishlist-e:after, .km-Wishlist-e:before {
-    content: "\e044";
+#kendoUiMobileApp .padding-left-15 {
+    padding-left: 15px;
 }
 
-.km-notifyicon-e:after, .km-notifyicon-e:before {
-    content: "\f0f3";
-    font-family: "fontawesome"!important;
+#kendoUiMobileApp .padding-left-20 {
+    padding-left: 20px;
 }
 
-.km-right-e:after, .km-right-e:before {
-    content: "\e316";
+#kendoUiMobileApp .padding-100 {
+    padding-top: 100px;
 }
 
-.km-pushnotify-e:after, .km-pushnotify-e:before {
-    content: "\e0b5";
+#kendoUiMobileApp .Gray-Circle {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #ecf0f1;
+    background-color: #ecf0f1;
+    font-family: "HimalayaFont"!important;
 }
 
-.km-disablepushnotify-e:after, .km-disablepushnotify-e:before {
-    content: "\e0b5";
-    color: #666;
+#kendoUiMobileApp .circle-next-div {
+    padding-left: 5px;
+    font-family: "HimalayaFont"!important;
 }
 
-.km-up-e:after, .km-up-e:before {
-    content: "\e011";
-    font-weight: bold;
-    font-size: 20px;
+#kendoUiMobileApp .GreenMsg {
+    color: #00A287;
+    font-family: "HimalayaFont"!important;
 }
 
-.km-down-e:after, .km-down-e:before {
-    content: "\e002";
-    font-size: 30px!important;
-    padding-right: 10px;
-}
-
-.km-arrow-e:after, .km-arrow-e:before {
-    content: "\e013";
-}
-
-.km-play-e:after, .km-play-e:before {
-    content: "\e013";
-}
-
-.km-up-e:after, .km-up-e:before {
-    content: "\e011";
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.km-down-e:after, .km-down-e:before {
-    content: "\e012";
-}
-
-.km-nova .km-details:after {
-    content: "\e217";
-    top: 3px;
-}
-
-.km-mail-e:after, .km-mail-e:before {
-    content: "\f003";
-    font-size: 2em!important;
-    font-family: "fontawesome"!important;
-    padding: 0px!important;
-    width: auto!important;
-    margin-left: -5px!important;
-}
-
-.km-phone-e:after, .km-phone-e:before {
-    content: "\f095";
-    font-size: 30px!important;
-    font-family: "fontawesome"!important;
-    padding: 1px 20px 10px 0px!important;
-}
-
-.km-help-e:after, .km-help-e:before {
-    content: "\f128";
-    font-size: 30px!important;
-    font-family: "fontawesome"!important;
-}
-
-.km-storelocator-e:after, .km-storelocator-e:before {
-    content: "\e0b4";
-    font-size: 25px!important;
-}
-
-.km-signout-e:after, .km-signout-e:before {
-    content: '\e0b3';
-}
-
-.km-rupees-e:after, .km-rupees-e:before {
-    content: "\f156";
+#kendoUiMobileApp .OrangeMsg {
+    color: #FF6600;
+    font-family: "HimalayaFont"!important;
     font-size: 14px!important;
-    font-family: "fontawesome"!important;
+    text-transform: uppercase;
 }
 
-.km-leftarrowcat-e:after, .km-leftarrowcat-e:before {
-    content: '\e21d';
-    height: 10px!important;
-    background: transparent!important;
-    border: 0px!important;
-    padding: 0px;
+#kendoUiMobileApp .km-collapsible-content {
+    text-align: left!important;
+    width: 100%!important;
 }
 
-.km-rightarrowcat-e:after, .km-rightarrowcat-e:before {
-    content: '\e30e';
-    height: 10px!important;
-    background: transparent!important;
-    border: 0px!important;
-    padding: 0px;
+#kendoUiMobileApp .km-collapsible-header {
+    text-align: left!important;
+    width: 100%!important;
 }
 
-.km-key-e:after, .km-key-e:before {
-    content: "\e0b1";
-    font-size: 2em;
-    color: #ff4350 !important;
+#kendoUiMobileApp .Font20 {
+    font-size: 20px;
+    font-family: "HimalayaFont"!important;
 }
 
-.km-user-e:after, .km-user-e:before {
-    content: "\e319";
-    font-size: 2em;
-    color: #ff4350 !important;
+
+#kendoUiMobileApp .Font14 {
+    font-size: 14px;
+    font-family: "HimalayaFont"!important;
 }
 
-.km-previous-e:after, .km-previous-e:before {
-    content: "\e003";
-    font-size: 2em;
+#kendoUiMobileApp .Right {
+    float: right;
 }
 
-.km-networkconnectionicon:after, .km-networkconnectionicon:before {
-    content: "\f1eb";
-    font-size: 100px !important;
-    font-family: "fontawesome"!important;
+#kendoUiMobileApp .padding-before-productcount {
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 12px;
+    width: 30px;
+    font-family: "HimalayaFont"!important;
 }
 
-.km-close-e:after, .km-close-e:before {
+#kendoUiMobileApp .clear-after-product-count {
+    clear: both;
+    float: left;
+    display: block;
+    position: relative;
+}
+
+#kendoUiMobileApp .product-price-display {
+    font-size: 13px;
+    float: left;
+    color: black;
+    font-family: "HimalayaFont"!important;
+}
+
+#kendoUiMobileApp .details-desc-spacing {
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: "HimalayaFont"!important;
+}
+
+#kendoUiMobileApp .italic {
+    font-style: italic;
+    font-family: "HimalayaFont"!important;
+}
+ 
+
+
+#kendoUiMobileApp .discription {
+    text-align: justify;
+}
+
+    #kendoUiMobileApp .discription ul li {
+        line-height: 2;
+        font-size: 14px!important;
+    }
+
+
+/* details page style end */
+
+
+/*Other custom style start  */
+::-webkit-input-placeholder {
+    color: #7f8c8d;
+    font-size: 20px;
+    font-family: "HimalayaFont"!important;
+}
+
+::-moz-placeholder {
+    color: #7f8c8d;
+    font-size: 20px;
+}
+/* firefox 19+ */
+:-ms-input-placeholder {
+    color: #7f8c8d;
+    font-size: 20px;
+    font-family: "HimalayaFont"!important;
+}
+/* ie */
+input:-moz-placeholder {
+    color: #7f8c8d;
+    font-size: 20px;
+    font-family: "HimalayaFont"!important;
+}
+
+
+
+
+#kendoUiMobileApp .startLink {
+    border-bottom: 5px solid #FF6600;
+}
+
+
+
+
+#kendoUiMobileApp .image-with-text {
+    display: table;
+    width: 100%;
+}
+
+
+#kendoUiMobileApp .home-image-a {
+    border: 1px solid #f7f7f7;
+    width: 50%;
+    float: left;
+}
+
+
+#kendoUiMobileApp .km-listview-link {
+    color: #000;
+}
+
+#kendoUiMobileApp .km-icon .km-home {
+    color: #000;
+}
+
+#kendoUiMobileApp .class50 {
+    width: 50%;
+}
+
+#kendoUiMobileApp .class100 {
+    width: 100%;
+}
+
+#kendoUiMobileApp .class200 {
+    width: 200%;
+}
+
+#kendoUiMobileApp .class150 {
+    width: 150%;
+}
+
+#kendoUiMobileApp .class240 {
+    width: 240%;
+}
+#kendoUiMobileApp .class300 {
+    width: 340%;
+}
+
+
+#kendoUiMobileApp .greenbg {
+    background: #00A287!important;
+    padding:10px;
+    display:table-cell;
+    border-right:1px solid #fff;
+}
+
+#kendoUiMobileApp .greybg {
+    background: #f7f7f7!important;
+    padding:10px;
+    display:table-cell;
+    border-right:1px solid #fff;
+}
+
+#kendoUiMobileApp .greenbg h3 {
+    color: #ffffff!important;
+     padding:10px;
+    display:table-cell;
+    text-transform:uppercase;
+}
+
+#kendoUiMobileApp .greybg h3 {
+    color: #666666!important;
+     padding:10px;
+    display:table-cell;
+    text-transform:uppercase;
+}
+
+#kendoUiMobileApp .rewardpoints{
+    padding-top:20px;
+}
+
+
+#kendoUiMobileApp h5 {
+    color: #FF6600;
+    width: 220px;
+    font-size: 14px;
+}
+
+#kendoUiMobileApp h2 {
+    color: #FF6600;
+}
+
+#kendoUiMobileApp h3 {
+    color: #FF6600;
+    font-size: 14px;
+}
+
+#kendoUiMobileApp .left {
+    float: left;
+    vertical-align: middle;
+}
+
+
+@font-face {
+    font-family: "HimalayaFont";
+    src: url("Font/OpenSans-Semibold-webfont.woff") format("woff"), url("Font/OpenSans-Semibold-webfont.ttf") format("truetype");
+}
+ 
+
+#kendoUiMobileApp .km-nova {
+    font-family: "HimalayaFont"!important;
+}
+
+body {
+    font-family: "HimalayaFont"!important;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+
+h1, h2, h3, h4, h5, h6, span, div, input, li, a {
+    font-family: "HimalayaFont"!important;
+}
+
+p {
+    line-height: 2;
+    font-size: 14px!important;
+}
+
+
+
+
+
+
+/* Product content css start */
+
+#kendoUiMobileApp  .productcontentClass .importantblock{
+/*     font-style: italic!important; */
+/*     border:1px solid #DDD;  */
+    background-color:#F0F0F0;
+    padding:10px;
+    font-size:11px!important;
+}
+
+#kendoUiMobileApp .productcontentClass{
+    color:#666!important;
+    font-weight:normal!important;
+    line-height: 2;
+    /*font-size: 14px;*/
+    padding:0px!important;
+    font-size:103% !important ;
+    
+    
+}
+#kendoUiMobileApp .productcontentClass p{
+    color:#666!important;
+    font-weight:normal!important;
+    font-size:103% !important ;
+}
+
+#kendoUiMobileApp .productcontentClass strong{
+    font-weight:bold!important;
+    font-size:103% !important ;
+}
+
+
+#kendoUiMobileApp .productcontentClass h4{
+      padding-top:20px!important;
+      font-size:103% !important ;
+}
+#kendoUiMobileApp .productcontentClass h4 strong{
+    font-size:16px;
+    color:#FF6600!important;
+    font-size:103% !important ;
+}
+#kendoUiMobileApp .productcontentClass p strong{
+    font-weight:bold!important;
+    color:#000!important;
+    font-size:103% !important ;
+}
+#kendoUiMobileApp .productcontentClass ul li strong{
+    font-weight:bold!important;
+    color:#000!important;
+    font-size:103% !important ;
+    
+}
+
+#kendoUiMobileApp .productcontentClass > ul  > li{
+    list-style:none;
+    list-style-image:url("../images/li-icon.png");
+    line-height: 2;
+    font-weight:normal!important;
+    margin-left:20px;
+    font-size:103% !important ;
+}
+
+
+#kendoUiMobileApp .productcontentClass > ul  > li > ul > li{
+     list-style-image:none;
+     list-style:circle;
+    
+/*      list-style-image:url("../images/li-icon.png"); */
+     margin-left:20px;
+     font-size:103% !important ;
+}
+
+#productdetaildivpharma ul{
+    padding:0px !important;
+}
+/* Product content css end  */
+
+
+/* static content CSS start */
+
+
+.km-touch-scrollbar {
+    background-color:transparent!important;
+}
+
+.km-nova .km-tabstrip{
+    table-layout:none!important;
+}
+
+.km-nova .km-navbar .km-back::before, .km-nova .k-toolbar .km-back::before {
+    content:""!important;
+    display:none!important;
+}
+
+
+#ingredientsicon, #nutritionalicon, .tablediv, .tdheaddiv1, .tdheaddiv2, .trheaddiv {
+    float: left;
+    position: relative;
+}
+.ingredientsicon-old, .researchpapersicon {
+    float: left;
+    font-weight: 700;
+    padding-left: 35px;
+    padding-top: 3px;
+    position: relative;
+}
+.researchpapersicon {
+    background-repeat: no-repeat;
+    color: #024364;
+    cursor: pointer;
+    height: 20px;
+    width: 375px;
+}
+.newsarchiveactive {
+    color: #f60;
+}
+.pressreleasehide {
+    display: none;
+}
+#ingredients {
+    width: 100%;
+    z-index: 20000;
+}
+.front-button, .front-button-innerdiv {
+    float: left;
+    position: relative;
+    z-index: 1000;
+}
+#ingredientsicon, #nutritionalicon, .ingredientsicon-old {
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 30px;
+    width: 375px;
+}
+
+.ingredientsicon-old {
+    background-image: url("../img/ingredientsicon.gif");
+    color: #024364;
+}
+
+#ingredientsicon, #nutritionalicon {
+    margin-left: 30px;
+    text-align: center;
+}
+.tablediv, .trheaddiv {
+    width: 100%;
+}
+.tablediv {
+    border-right: 1px solid #ccc;
+    margin-bottom: 10px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+
+.trheaddiv {
+    background-color: #666;
+    color: #fff;
+    font-weight: 700;
+  /*  height: 30px;
+     text-align: center; */
+}
+.front-button, .trdiv1, .trdiv2 {
+    background-color: #fff;
+}
+.tdheaddiv1 {
+    height: 30px;
+    padding: 7px;
+    width: 20%;
+}
+.tdheaddiv2 {
+    height: 20px;
+    padding: 7px;
+    width: 75%;
+}
+.tdheadfulldiv, .trdiv1, .trdiv2 {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+.tdheadfulldiv {
+    /* height: 30px;
+   padding: 7px;*/
+    padding-left:10px;
+    text-align: left;
+}
+.divColumn, .divRow, .productdiv {
+    text-align: center;
+}
+.tddiv1, .tddiv1mw {
+    float: left;
+    height: 100%;
+    /*padding: 7px;*/
+    padding-left:10px;
+    position: relative;
+}
+.trdiv1 {
+    border: 1px solid #ccc;
+}
+.tddiv1 {
+    width: 20%;
+}
+.tddiv1mw {
+    width: 30%;
+    color:#666;
+}
+.tddiv1mw strong{
+    color:#000;
+}
+.tddiv1lw, .tddiv2 {
+    float: left;
+    height: 100%;
+    /*padding: 7px;*/
+    padding-left:10px;
+    position: relative;
+    width: 50%;
+}
+.tddiv2mw {
+    float: left;
+    height: 100%;
+    padding: 7px;
+    position: relative;
+    width: 60%;
+}
+.tddiv2lw, .tddiv3 {
+    float: left;
+    padding: 7px;
+    position: relative;
+      width: 30%;
+}
+
+.tddiv2lw {
+    height: 100%;
+/*     white-space: nowrap; */
+}
+.tddiv3 {
+    height: 100px;
+}
+.tddiv3lw {
+    float: left;
+    height: 50px;
+    padding: 7px;
+    position: relative;
+    width: 30%;
+}
+.tddiv3lh {
+    float: left;
+    height: 220px;
+    padding: 7px;
+    position: relative;
+    width: 20%;
+}
+.divTable {
+    width: 100%;
+}
+.divRow {
+    width: 99%;
+}
+.divColumn {
+    display: block;
+    float: left;
+    width: 33%;
+}
+.border-noneval {
+    border: 0 none;
+}
+.front-button {
+    border: 5px solid #efefef;
+    color: #666;
+    display: none;
+    width: 300px;
+}
+.front-button-innerdiv {
+    padding-left: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+
+
+/*  css by hemant start */
+#kendoUiMobileApp  .textcontent{
+  line-height: 2;
+        font-size: 14px!important;
+    text-align: justify
+}
+
+#kendoUiMobileApp .bordernone{
+    border:none;
+}
+.expand-one{
+      background-image: url('../images/icons/right_arrow.png');
+    background-repeat:no-repeat;
+    background-position:left;
+      background-size: 13px 13px;
+    padding-left:18px;
+  
+    
+}
+.expand-one-active{
+      background-image: url('../images/icons/down_arrow.png');
+    background-repeat:no-repeat;
+    background-position:left;
+      background-size: 13px 13px;
+    padding-left:18px;
+  
+    
+}
+
+.not-active {
+   pointer-events: none;
+   cursor: default;
+}
+
+div.content-one {
+    display:none;
+     padding-left:20px;
+}
+
+
+
+/* Main Left Hand Menu */
+.gridmenu{
+	display:block;	
+}
+.gridmenu li{
+    /*float:left;
+    position:relative;
+    width:50%;*/
+    height:50px !important;
+    border:0px solid #eee !important;
+    text-align: left;
+    line-height: 15px !important;
+    background-color: #FFF !important;
+    font-size:10px !important;
+        -webkit-box-shadow: 0px 0px 8px 2px #eee;
+       -moz-box-shadow: 0px 0px 8px 2px #eee;
+            box-shadow: 0px 0px 8px 2px #eee;
+
+}
+.gridmenu li a{
+    font-size:14px !important;
+    font-family: "HimalayaFont"!important;
+    padding-left: 6px;
+     background-color:transparent !important;
+}
+#kendoUiMobileApp .navigation{
+    background-color:#ffffff !important;
+}
+.km-nova .km-drawer .km-content #navigation-container li{
+    background-color:#ffffff !important;
+}
+
+.km-nova .km-drawer .km-content{
+    background-color:#ffffff !important;
+}
+
+.km-scrollview {
+    white-space:normal!important;
+    overflow:hidden!important;
+}
+
+ .pages {
+        height: 100%!important;
+        width: 100%!important;
+    }
+
+iframe.shim {
+    width:            100%;
+    height:           100%;
+    position:         absolute;
+    left:             0px;
+    top:              0px;
+    z-index:          100;
+    background-color: #fff;
+    opacity:          0.5;                 /* Standard */
+    filter:           alpha(opacity = 50); /* For IE */
+}
+div.overlay {
+    z-index:          101;
+    border:           1px solid #eee;
+    background-color: #fff;
+    position:         absolute;
+    left:             20%;
+    top:              200px;
+    padding:		10px;
+}
+.km-on-ios.km-ios7
+{
+    background-color: #fff; /* Required for the tint */
+    -webkit-linear-gradient(top, black,  black); /* Colorize the body as you wish. */
+}
+
+
+
+
+
+
+
+
+/* Button Icons Start */
+.fa {
+    color: #ff6600 !important;
+}
+.fa-envelope {
+    color: #006666 !important;
+}
+
+.fa-phone {
+    color: #006666 !important;
+}
+/*.km-close-e ,.km-close-e:after, .km-close-e:before {
     content: "\e031";
     font-size: 1.5em;
-    color: #ff4350 !important;
+    color: #ff6600 !important;
+} 
+.km-key-e ,.km-key-e:after, .km-key-e:before {
+    content: "\e0b1";
+    line-height: 30px !important;
+    font-size: 30px !important;
+    color : #ff6600 !important;
 }
 
-.km-speaker-e:after, .km-speaker-e:before {
-    content: "\e0b5";
-    font-size: 2em;
-    color: yellow!important;
-}
-
-.km-maincat-e:after, .km-maincat-e:before {
-     content: "\e0b5";
-    font-size: 7em !important ; 
-}
-
-.km-subcat-e:after, .km-subcat-e:before {
-     content: "\e0b1";
-    font-size: 4em !important ; 
-}
-/* Offline Form*/
-
-
-/* Offline Form*/
-
-
+.km-user-e, .km-user-e:after, .km-user-e:before {
+    content: "\e319";
+    line-height: 30px !important;
+    font-size: 30px !important;
+    color : #ff6600 !important;
+}*/ 
 /* Button Icons End */
 
-
-/* common error start */
-
-#dverrorbody {
-    border: 1px solid #666;
-}
-
-#dverrorbody li span {
-    width: 10%;
-}
-
-#dverrorbody li h3 {
-    width: 90%;
-    color: #cc4141;
-}
-
-
-/* common error End*/
-
-
-/* Form Inputs  Start*/
-
-.textinput {
-     font-size: 2em !important ;
-}
-
-.hbutton
-{
-     font-size: 2em !important ;
-}
-.liheight
-{
-    line-height:70px;
-}
-
-/* Form Inputs End*/
 
 /* login form Start*/
 
 #kendoUiMobileApp .signin-view .dvlogo {
-    text-align: center;
-    padding: 50px;
+    text-align: left;
+    padding: 50px 0px 0px 0px !important ;
 }
+
+    #kendoUiMobileApp .signin-view .dvlogo img {
+        width: 30%;
+    }
 
 #kendoUiMobileApp .signin-view {
     width: 90%;
     margin: auto;
 }
 
-#kendoUiMobileApp .signin-view span {
-    width: 10%;
-}
+    #kendoUiMobileApp .signin-view span {
+        width: 10%;
+    }
 
-#kendoUiMobileApp .signin-view input {
-    width: 90%;
-}
+    #kendoUiMobileApp .signin-view input {
+        width: 90%;
+    }
 
 
 /* login form  End */
 
-
 /* feedback form start */
 
+
+#customerformScreen .km-header,
 #feedbackformViewScreen .km-header {
-    background-color: #fff !important;
+    background-color: #ff6600 !important;
 }
 
-#feedbackformViewScreen .km-header h1 {
-    background-color: #fff !important;
-    color: #ff6600 !important;
-    padding: 10px !important;
+    #customerformScreen .km-header h1,
+    #feedbackformViewScreen .km-header h1 {
+        color: #fff !important;
+        padding: 10px !important;
+    }
+
+#customerformScreen .km-footer,
+#feedbackformViewScreen .km-footer {
+    background-color: #006666 !important; 
+    text-align: center;
+    line-height: 1.2em !important;
+    font-size: 2em !important;
 }
 
-#feedbackformViewScreen .km-footer   {
-    background-color: #fff !important;
-    color: #ff6600 !important; 
-    margin:10px !important; 
-    padding:10px !important; 
-}
+    #feedbackformViewScreen .km-footer .dvquestionnumber {
+        padding: 20px 10px 5px 10px !important ;
+        vertical-align:middle ; 
+        margin:2px;
+        float: left;
+        text-align: center; 
+        height: 90px;
+        width: 90px;
+        color:#fff !important ;
+        background-color: #ff6600 !important;
+        border-radius: 50px !important;
+    }
 
+    #feedbackformViewScreen .km-footer a {
+        width: 90%;
+        text-align: center;
+        line-height: 1.2em !important;
+        font-size: 2em !important;
+    } 
 
 /* feedback form   End */
 
 
-/* Cutome rk tag and class start */
+ 
+/* Form Inputs  Start*/
 
+h1, h2, h3, h4, h5, h6 {
+    color: #f60;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 32px !important;
+}
+
+.hbutton {
+    background-color: #006666 !important;
+    line-height: 1.5em !important;
+    font-size: 1.5em !important;
+    color: #fff !important;
+    border: 0 !important;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hbutton-green {
+    background-color: #006666 !important;
+    line-height: 1.5em !important;
+    font-size: 1.5em !important;
+    padding-top:3px !important ;
+    color: #fff !important;
+    border: 0 !important;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.inputtext {
+    line-height: 2em !important;
+    font-size: 2em !important;
+}
+
+#dvinputcname input[type=text], #dvinputcmail input[type=email],
+#dvinputcmobile input[type=number] {
+    height: 100px !important;
+    width: 100% !important;
+    line-height: 2em !important;
+    font-size: 2em !important;
+    padding-left: 20px;
+}
+
+#dvemailaddress input[type=email], #dvtextsingleline input[type=text],
+#dvwebsiteurl input[type=url], #dvpincode input[type=number] {
+    height: 100px !important;
+    width: 100% !important;
+    line-height: 2em !important;
+    font-size: 2em !important;
+    padding-left: 20px;
+}
+
+#dvtextmultiline textarea {
+    height: 200px !important;
+    width: 100% !important;
+    line-height: 2em !important;
+    font-size: 2em !important;
+    padding-left: 20px;
+}
+
+
+#dvsinglechoice input[type=radio] {
+    display: none;
+}
+
+    #dvsinglechoice input[type=radio] + label {
+        display: inline-block;
+        line-height: 2em !important;
+        font-size: 2em !important;
+        color: #ff6600;
+        text-align: left;
+        padding: 30px 10px 30px 10px;
+        vertical-align: middle;
+        background-color: #f4f4f4 !important;
+        width: 100% !important;
+        height: 123px !important;
+        border-bottom: 2px solid #ddd;
+    }
+
+    #dvsinglechoice input[type=radio]:checked + label {
+        outline: 0;
+        color: #fff !important;
+        background-color: #ff6600 !important;
+        border-radius: 2% !important;
+        width: 100% !important;
+    }
+
+
+
+#dvmultichoice input[type=checkbox] {
+    display: none;
+}
+
+    #dvmultichoice input[type=checkbox] + label {
+        display: inline-block;
+        line-height: 2em !important;
+        font-size: 2em !important;
+        color: #ff6600;
+        text-align: left;
+        padding: 30px 10px 30px 10px;
+        vertical-align: middle;
+        background-color: #fff !important;
+        width: 100% !important;
+        height: 123px !important;
+        border-bottom: 2px solid #ddd;
+    }
+
+    #dvmultichoice input[type=checkbox]:checked + label {
+        outline: 0;
+        color: #fff !important;
+        background-color: #ff6600 !important;
+        border-radius: 2% !important;
+        width: 100% !important;
+    }
+
+
+#dvyesno, #dvtruefalse {
+    text-align: center;
+    padding-top: 8%;
+}
+
+    #dvyesno input[type=radio], #dvtruefalse input[type=radio] {
+        display: none;
+    }
+
+        /*#dvyesno input[type=radio] + label, #dvtruefalse input[type=radio] + label {
+            display: inline-block;
+            padding-top: 45px;
+            line-height:3em !important;
+            font-size: 3em !important;
+            color: #fff;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 50% !important;
+            background-color: #006666 !important;
+            width: 225px !important;
+            height: 225px !important;
+        }*/
+
+       #dvyesno input[type=radio] + label[class=green], #dvtruefalse input[type=radio] + label[class=green]{
+            display: inline-block;
+            padding-top: 45px;
+            line-height:3em !important;
+            font-size: 3em !important;
+            color: #fff;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 50% !important;
+            background-color: #146d29 !important;
+            width: 225px !important;
+            height: 225px !important; 
+           
+        }
+
+       #dvyesno input[type=radio] + label[class=red], #dvtruefalse input[type=radio] + label[class=red]{
+            display: inline-block;
+            padding-top: 45px;
+            line-height:3em !important;
+            font-size: 3em !important;
+            color: #fff;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 50% !important;
+            background-color: #cc4141 !important;
+            width: 225px !important;
+            height: 225px !important; 
+           
+        } 
+
+        #dvyesno input[type=radio]:checked + label, #dvtruefalse input[type=radio]:checked + label {
+            outline: 0;
+            padding-top: 40px !important;
+            line-height:4em !important;
+            font-size: 4em !important;
+            border-radius: 50% !important;
+            width: 300px !important;
+            height: 300px !important;
+            color: #fff !important;
+            background-color: #ff6600 !important;
+           
+        } 
+
+
+/* Form Inputs End*/
+
+/* common error start */
+
+#dverrorbody, #dvsuccessbody {
+    border: 1px solid #666 !important;
+}
+
+    #dverrorbody li i, #dvsuccessbody li i {
+        width: 5%;
+        float: left; 
+    }
+
+    #dverrorbody li #h3errormessage, #dvsuccessbody li #h3successmessage {
+        width: 95%;
+        line-height: 1.3em !important;
+        font-size: 1.3em !important;
+    }
+
+    #h3errormessage {
+        color: #cc4141 !important;
+    }
+
+    #h3successmessage {
+        color: #006666 !important;
+    }
+
+/* common error End*/
+
+
+/* Custome rk tag and class start */
+.mandatory
+{
+    color:#cc4141 !important ;
+    font-size: 1em !important ;
+}
 .paddingTopBottom-5 {
     padding-top: 5px !important;
     padding-bottom: 5px !important;
@@ -381,7 +1143,12 @@ mark, .mark {
     padding: .2em;
     background-color: #fcf8e3;
 }
-
+.note 
+{
+  font-size: 1em !important ;
+  padding :3px;
+  color  :#006666;
+}
 .text-left {
     text-align: left;
 }
@@ -419,86 +1186,334 @@ mark, .mark {
 }
 
 
-/* Cutome rk tag and class end */
+/* Custome rk tag and class end */ 
 
+/* Loading popup start */
 
-/* dashbaord view start */
+.km-ios #loading .km-content {
+    background: transparent;
+}
 
-#dvdashboard , #dvstoredashboard {
+#loading .km-content {
     text-align: center;
-    padding-top: 20%;
 }
 
-#dvdashboard .primary ,#dvstoredashboard .primary{
-    width: 150px !important;
-    height: 150px !important;
-    font-size: 32px;
+#show {
+    margin-top: 100px;
+    font-size: 1.2em;
 }
 
+/* Example Counter */
+.km-meego h1.loaderHeading,
+.km-blackberry h1.loaderHeading {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    width: 1em;
+    left: 50%;
+    height: 1em;
+    top: 50%;
+    font-size: 1.2rem;
+    margin: -.65em 0 0 -.5em;
+}
 
-/* dashbaord view end */
+.km-material h1.loaderHeading,
+.km-flat h1.loaderHeading,
+.km-android h1.loaderHeading,
+.km-wp h1.loaderHeading {
+    display: block;
+}
+
+.km-ios h1.loaderHeading {
+    font-size: 1rem;
+}
+
+.km-meego h1.loaderHeading,
+.km-blackberry h1.loaderHeading {
+    font-size: 1.5rem;
+}
+
+.km-android-light h1.loaderHeading {
+    color: #222;
+}
+/* Loading popup end */
 
 
-/* cusotmer form view start */
+
+/* G STLESHEET STARTS */
+
+.full-100 {
+    width:100%; 
+    background-color: #fff;
+    height: 100% !important;
+    text-align: center;
+    padding-top: 200px;
+    color:#006666;
+}
+
+.left-half {
+    width: 50%;
+    float: left;
+    background-color: #ff6600;
+    height: 100% !important;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.right-half {
+    width: 50%;
+    float: right;
+    background-color: #ffffff;
+    height: 100% !important;
+    text-align: center;
+    padding-top: 200px;
+}
+.horange {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    color: #ff6600 !important; 
+}
+.h1orange {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-size: 51px !important;
+    color: #ff6600 !important;
+    text-transform:uppercase !important ;
+}
+
+.h1white {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-size: 51px !important;
+    color: #ffffff !important;
+}
+
+.h3orange {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-size: 24px !important;
+    color: #ff6600 !important;
+    text-transform:uppercase !important ;note
+}
+
+.quarter-circle-left {
+    background-color: #066 !important;
+    height: 110px !important;
+    width: 110px !important;
+    -moz-border-radius: 0 0 150px 0 !important;
+    border-radius: 0 0 150px 0 !important;
+    float: left !important;
+    font-size: 21px !important;
+    color: #fff !important;
+    padding-top: 25px !important;
+    padding-left: 7px !important;
+    border: 0 !important;
+    margin: 0 !important;
+}
+
+.quarter-circle-right {
+    background-color: #f60 !important;
+    height: 110px !important;
+    width: 110px !important;
+    -moz-border-radius: 0 0 0 150px !important;
+    border-radius: 0 0 0 150px !important;
+    float: right !important;
+    font-size: 21px !important;
+    color: #fff !important;
+    padding-top: 25px !important;
+    padding-left: 15px !important;
+    border: 0 !important;
+    margin: 0 !important;
+}
+ 
+
+/* G STLESHEET ENDS */
 
 
-/* cusotmer form view end */
 
-/* Loading popup start */ 
 
-.km-ios #loading .km-content
-    {
-        background: transparent;
+
+/* General Blueprint Style */
+
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #ff7549;
+}
+
+a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #000;
     }
 
-    #loading .km-content
-    {
+.container > header {
+    width: 90%;
+    max-width: 69em;
+    margin: 0 auto;
+    padding: 2.875em 1.875em 1.875em;
+}
+
+.main {
+    width: 90%;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+
+
+/* General grid styles */
+.cbp-ig-grid {
+    list-style: none;
+    padding: 0 0 50px 0;
+    margin: 0;
+}
+
+    /* Clear floats */
+    .cbp-ig-grid:before,
+    .cbp-ig-grid:after {
+        content: " ";
+        display: table;
+    }
+
+    .cbp-ig-grid:after {
+        clear: both;
+    }
+
+    /* grid item */
+    .cbp-ig-grid li {
+        width: 33%;
+        padding-top:10px !important ;
+        float: left;
+        height: 270px;
         text-align: center;
+        border-top: 1px solid #ddd;
     }
 
-    #show
-    {
-        margin-top: 100px;
-        font-size: 1.2em;
+        /* we are using a combination of borders and box shadows to control the grid lines */
+        .cbp-ig-grid li:nth-child(-n+3) {
+            border-top: none;
+        }
+
+        .cbp-ig-grid li:nth-child(3n-1),
+        .cbp-ig-grid li:nth-child(3n-2) {
+            box-shadow: 1px 0 0 #ddd;
+        }
+
+        /* anchor style */
+        .cbp-ig-grid li > a {
+            display: block;
+            height: 100%;
+            color: #ff7549;
+            -webkit-transition: background 0.2s;
+            -moz-transition: background 0.2s;
+            transition: background 0.2s;
+        }
+        .cbp-ig-grid li > a:after {
+border-color: #ff6600 !important;
+content: "\a0"; 
+display: none;
+position: absolute;
+right: 1rem;
+top: 50%;
+margin-top: -.32rem;  
+}
+        /*.cbp-ig-grid li:last-child { border:0px; }*/
+
+/* the icon with pseudo class for icon font */
+.cbp-ig-icon {
+    padding: 30px 0 0 0;
+    display: block;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -moz-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+    .cbp-ig-icon:before {
+        font-family: 'anyoldicon';
+        font-size: 14em;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
     }
 
-    /* Example Counter */
-    .km-meego h1.loaderHeading,
-    .km-blackberry h1.loaderHeading
-    {
-        display: block;
+
+
+/* title element */
+.cbp-ig-grid .cbp-ig-title {
+    margin: 20px 0 5px 0;
+    padding: 20px 0 0 0;
+    font-size: 1.1em;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.2s;
+    -moz-transition: -moz-transform 0.2s;
+    transition: transform 0.2s;
+    text-transform: uppercase;
+}
+
+    .cbp-ig-grid .cbp-ig-title:before {
+        content: '';
         position: absolute;
-        overflow: hidden;
-        width: 1em;
+        background: #ff7549;
+        width: 160px;
+        height: 3px;
+        top: 0px;
         left: 50%;
-        height: 1em;
-        top: 50%;
-        font-size: 1.2rem;
-        margin: -.65em 0 0 -.5em;
+        margin: -10px 0 0 -80px;
+        -webkit-transition: margin-top 0.2s; /* top or translate does not seem to work in Firefox */
+        -moz-transition: margin-top 0.2s;
+        transition: margin-top 0.2s;
     }
 
-    .km-material h1.loaderHeading,
-    .km-flat h1.loaderHeading,
-    .km-android h1.loaderHeading,
-    .km-wp h1.loaderHeading
-    {
-        display: block;
-    }
+.cbp-ig-grid .cbp-ig-category {
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: .75em;
+    letter-spacing: 1px;
+    color: #aaa !important;
+    -webkit-transform: translateY(10px);
+    -moz-transform: -moz-translateY(10px);
+    -ms-transform: -ms-translateY(10px);
+    transform: translateY(10px);
+    opacity: 1;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    -webkit-transition: transform 0.3s, opacity 0.2s;
+}
 
-    .km-ios h1.loaderHeading
-    {
-    	font-size: 1rem;
-    }
-    .km-meego h1.loaderHeading,
-    .km-blackberry h1.loaderHeading
-    {
-        font-size: 1.5rem;
-    }
+/*.cbp-ig-grid li:hover*/ 
+.cbp-ig-category,
+.touch .cbp-ig-grid li .cbp-ig-category {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+}
 
-    .km-android-light h1.loaderHeading
-    {
-        color: #222;
-    }
-/* Loading popup end */ 
-
-
+ 

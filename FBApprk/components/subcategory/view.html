@@ -1,92 +1,221 @@
-<div data-role="view" data-title="Sub Category" data-layout="main" data-model="app.subcategory" data-show="app.subcategory.onShow"
+<div data-role="view" data-reload="true" data-title="Sub Category" data-layout="product-layout" data-model="app.subcategory" data-show="app.subcategory.onShow"
      data-after-show="app.subcategory.afterShow" id="subcategoryScreen" class="screen">
     <!-- START_CUSTOM_CODE_thankyou -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
      
-    <header data-role="header" class="km-header"> 
-        
-         <div class="button-group">
-            <a data-role="backbutton" class="primary" data-align="right">Back </a>
-            <a class="primary" data-role="button" href="components/dashboard/view.html"> Home</a>
-        </div>
-        <span id="headervalue">
-        </span> 
+    <header data-role="header" class="km-header">  
+        <a data-role="backbutton" class="quarter-circle-left" > B A C K</a>
+        <a class="quarter-circle-right" data-role="button"  onclick="redirecttocustomerdashboard();"> H O M E</a>
+        <h1 id="headervaluesubcat" class="h1orange" style="padding-left:163px;"></h1>
     </header>
-    <div id="dv53" style="display:none">
-        <div class="button-group">
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="61"> Children's Health</a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="63">Derma Care</a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="69">General Health</a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="75">Men's Health</a>
-        </div>
-        <div class="button-group">
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="77"> Oral Health</a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="81"> Women's Health</a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="97"> Nutrition Health</a>
 
-        </div>
-    </div>
-    <div id="dv96" style="display:none">
-        <div class="button-group">
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="99">nutrition</a>
-        </div>
-    </div>
-    <div id="dv55" style="display:none">
-        <div class="button-group">
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="80">pure herbs</a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="68">general wellness</a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="98">nutrition</a>
-        </div>
-    </div>
-    <div id="dv54" style="display:none">
-        <div class="button-group">
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="60">body care</a>
-            <!--<a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="60">combo packs</a>-->
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="65">eye care</a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="66">face care</a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="71">hair care</a>
+    <div class="container">
+        <div class="main" id="dvsubcatgories">
+            <ul class="cbp-ig-grid"  id="dv53" style="display:none">
+                <li>
+                    <a onclick="producttagscreen(61);">
+                        <span><img src="images/himalayaicons/subcategory/pharmaceuticals/chidrenshealth.png" /></span>
+                        <h2 class="cbp-ig-title">Children's Health</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(63);">
+                         <span><img src="images/himalayaicons/subcategory/pharmaceuticals/dermacare.png" /></span>
+                        <h2 class="cbp-ig-title">Derma Care</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(69);" >
+                         <span><img src="images/himalayaicons/subcategory/pharmaceuticals/generalhealth.png" /></span>
+                        <h2 class="cbp-ig-title">General Health</h2>
+                        <span class="cbp-ig-category"> </span>
+                    </a>
+                </li>
+                <li>
+                    <a  onclick="producttagscreen(75);" >
+                         <span><img src="images/himalayaicons/subcategory/pharmaceuticals/menshealth.png" /></span>
+                        <h2 class="cbp-ig-title">Men's Health</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a  onclick="producttagscreen(77);">
+                         <span><img src="images/himalayaicons/subcategory/pharmaceuticals/oralhealth.png" /></span>
+                        <h2 class="cbp-ig-title">Oral Health</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a  onclick="producttagscreen(81);" >
+                         <span><img src="images/himalayaicons/subcategory/pharmaceuticals/womenshealth.png" /></span>
+                        <h2 class="cbp-ig-title">Women's Health</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a  onclick="producttagscreen(97);" >
+                         <span><img src="images/himalayaicons/subcategory/pharmaceuticals/nutritionhealth.png" /></span>
+                        <h2 class="cbp-ig-title">Nutrition</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>  
+            </ul>
 
-        </div>
-        <div class="button-group">
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="73">lip packs</a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="74">men's care</a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="76">oral care</a>
-            <a></a>
+            <ul class="cbp-ig-grid" id="dv96" style="display:none">
+                <li>
+                    <a onclick="producttagscreen(99);" >
+                         <span><img src="images/himalayaicons/subcategory/nutrition/nutritionhealth.png" /></span>
+                        <h2 class="cbp-ig-title">Nutrition</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>  
+            </ul>
+
+            <ul class="cbp-ig-grid" id="dv55" style="display:none">
+                <li>
+                    <a onclick="producttagscreen(80);" >
+                         <span><img src="images/himalayaicons/subcategory/wellness/pureherbs.png" /></span>
+                        <h2 class="cbp-ig-title">pure herbs</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(68);">
+                         <span><img src="images/himalayaicons/subcategory/wellness/generalwellness.png" /></span>
+                        <h2 class="cbp-ig-title">general wellness</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(98);" >
+                         <span><img src="images/himalayaicons/subcategory/wellness/nutritionhealth.png" /></span>
+                        <h2 class="cbp-ig-title">nutrition</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="cbp-ig-grid" id="dv54" style="display:none">
+                <li>
+                    <a onclick="producttagscreen(60);" >
+                         <span><img src="images/himalayaicons/subcategory/personalcare/bodycare.png" /></span>
+                        <h2 class="cbp-ig-title">body care </h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(65);" >
+                         <span><img src="images/himalayaicons/subcategory/personalcare/eyecare.png" /></span>
+                        <h2 class="cbp-ig-title">eye care</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(66);" >
+                         <span><img src="images/himalayaicons/subcategory/personalcare/facecare.png" /></span>
+                        <h2 class="cbp-ig-title">face care</h2>
+                        <span class="cbp-ig-category"> </span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(71);" >
+                         <span><img src="images/himalayaicons/subcategory/personalcare/haircare.png" /></span>
+                        <h2 class="cbp-ig-title">hair care</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(73);" >
+                         <span><img src="images/himalayaicons/subcategory/personalcare/lipcare.png" /></span>
+                        <h2 class="cbp-ig-title">lip care</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(74);">
+                         <span><img src="images/himalayaicons/subcategory/personalcare/menscare.png" /></span>
+                        <h2 class="cbp-ig-title">men's care</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(76);">
+                         <span><img src="images/himalayaicons/subcategory/personalcare/oralcare.png" /></span>
+                        <h2 class="cbp-ig-title">oral care</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li> 
+            </ul>
+
+            <ul class="cbp-ig-grid" id="dv106" style="display:none">
+                <li>
+                    <a onclick="producttagscreen(107);" >
+                         <span><img src="images/himalayaicons/subcategory/himalayaformoms/bodycare.png" /></span>
+                        <h2 class="cbp-ig-title">body care</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(108);" >
+                         <span><img src="images/himalayaicons/subcategory/himalayaformoms/nursingcare.png" /></span>
+                        <h2 class="cbp-ig-title">Nursing care</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li> 
+            </ul>
+
+            
+            <ul class="cbp-ig-grid" id="dv56" style="display:none">
+                <li>
+                    <a onclick="producttagscreen(79);" >
+                         <span><img src="images/himalayaicons/subcategory/babycare/pre-bath.png" /></span>
+                        <h2 class="cbp-ig-title">Pre-bath</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(59);" >
+                         <span><img src="images/himalayaicons/subcategory/babycare/bath.png" /></span>
+                        <h2 class="cbp-ig-title">Bath</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(78);">
+                         <span><img src="images/himalayaicons/subcategory/babycare/post-bath.png" /></span>
+                        <h2 class="cbp-ig-title">Post-bath</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(64);" >
+                         <span><img src="images/himalayaicons/subcategory/babycare/babydiapers.png" /></span>
+                        <h2 class="cbp-ig-title">baby diapers</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="producttagscreen(70);" >
+                         <span><img src="images/himalayaicons/subcategory/babycare/babykits.png" /></span>
+                        <h2 class="cbp-ig-title">Baby Kits</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li> 
+            </ul>
+
+            <ul class="cbp-ig-grid" id="dv57" style="display:none">
+                <li>
+                    <a onclick="producttagscreen(62);" >
+                         <span><img src="images/himalayaicons/subcategory/animalcare/companion.png" /></span>
+                        <h2 class="cbp-ig-title">Companion</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li> 
+            </ul>
         </div>
     </div>
-    <div id="dv106" style="display:none">
-        <div class="button-group">
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="107">body care</a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="108">Nursing care</a>
-            <a></a>
-            <a></a>
-        </div>
-    </div>
-    <div id="dv56" style="display:none">
-        <div class="button-group">
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="79">Pre-bath</a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="59">Bath </a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="78">Post-bath </a>
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="64">baby diapers </a>
-        </div>
-        <div class="button-group">
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="70">Baby Kits </a>
-            <a></a>
-            <a></a>
-            <a></a>
-        </div>
-    </div>
-    <div id="dv57" style="display:none">
-        <div class="button-group">
-            <a class="primary km-icon km-subcat-e" data-role="button" onclick="gotoproducttag(this.id);" id="62">Companion</a>
-            <a></a>
-            <a></a>
-            <a></a>
-        </div>
-    </div>
-    <!--<div class="button-group">
-        <a data-role="button" class="primary hbutton" data-bind="events: { click: gotodashboard }">Home</a>
-        <a data-role="button" class="primary hbutton"  data-bind="events: { click: gotoretest}">Re-Test</a>
-    </div>-->
+      
     <!-- END_CUSTOM_CODE_thankyou -->
 </div>

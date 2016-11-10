@@ -16,34 +16,34 @@
     };
 
     var bootstrap = function () {
-        var os = kendo.support.mobileOS,
-    statusBarStyle = os.ios && os.flatVersion >= 700 ? 'white-translucent' : 'white';
+     //  var os = kendo.support.mobileOS,
+    //statusBarStyle = os.ios && os.flatVersion >= 700 ? 'white-translucent' : 'white';
         $(function () {
             app.mobileApp = new kendo.mobile.Application(document.body, {
-                transition: 'slide',
+                //transition: 'slide',
                 skin: 'nova',
-                initial: 'components/home/view.html',
-                statusBarStyle: statusBarStyle
+                initial: 'components/home/view.html' 
+                //statusBarStyle: statusBarStyle  
             });
         });
     };
 
-    $(document).ready(function () {
-        var navigationShowMoreView = $('#navigation-show-more-view').find('ul'),
-            allItems = $('#navigation-container-more').find('a'),
-            navigationShowMoreContent = '';
+    //$(document).ready(function () {
+    //    var navigationShowMoreView = $('#navigation-show-more-view').find('ul'),
+    //        allItems = $('#navigation-container-more').find('a'),
+    //        navigationShowMoreContent = '';
 
-        allItems.each(function (index) {
-            navigationShowMoreContent += '<li>' + allItems[index].outerHTML + '</li>';
-        });
+    //    allItems.each(function (index) {
+    //        navigationShowMoreContent += '<li>' + allItems[index].outerHTML + '</li>';
+    //    });
 
-        navigationShowMoreView.html(navigationShowMoreContent);
-    });
+    //    navigationShowMoreView.html(navigationShowMoreContent);
+    //});
 
-    app.listViewClick = function _listViewClick(item) {
-        var tabstrip = app.mobileApp.view().footer.find('.km-tabstrip').data('kendoMobileTabStrip');
-        tabstrip.clear();
-    };
+    //app.listViewClick = function _listViewClick(item) {
+    //    var tabstrip = app.mobileApp.view().footer.find('.km-tabstrip').data('kendoMobileTabStrip');
+    //    tabstrip.clear();
+    //};
 
     if (window.cordova) {
         document.addEventListener('deviceready', function () {
@@ -112,12 +112,43 @@
             }
         });
     };
-    // create customer information for storing customer test details start 
 
+
+
+    // I wanted a confirm button first opening setting, 
+    app.checkconnection = function () {
+        var networkState = navigator.connection.type;
+
+        var states = {};
+        states[Connection.UNKNOWN] = 'Unknown connection';
+        states[Connection.ETHERNET] = 'Ethernet connection';
+        states[Connection.WIFI] = 'WiFi connection';
+        states[Connection.CELL_2G] = 'Cell 2G connection';
+        states[Connection.CELL_3G] = 'Cell 3G connection';
+        states[Connection.CELL_4G] = 'Cell 4G connection';
+        states[Connection.CELL] = 'Cell generic connection';
+        states[Connection.NONE] = 'No network connection';
+
+        // $('#sp_connection_type').text(states[networkState] + " "  );
+        // but not available now 
+        if (states[networkState] == 'No network connection') {
+            // alert("we do something");
+            $("#h3errormessage").html(states[networkState] + " ");
+            $("#modalview-error").kendoMobileModalView("open");
+            $("#btnsignin").hide();
+            return;
+        }
+        else {
+            // alert('we do nothing! '); 
+            $("#btnsignin").show();
+        }
+    }
+
+    // create customer information for storing customer test details start 
     app.createtablecustomer = function () {
         var db = app.db;
         db.transaction(function (tx) {
-           // tx.executeSql("DROP TABLE sl_SURVEY_CUSTOMER_TEST_INFO", []);
+            // tx.executeSql("DROP TABLE sl_SURVEY_CUSTOMER_TEST_INFO", []);
             tx.executeSql("CREATE TABLE IF NOT EXISTS sl_SURVEY_CUSTOMER_TEST_INFO(ID INTEGER PRIMARY KEY ASC,"
                 + "STORE_MASTER_ID INTEGER,"
                 + "TEST_ID INTEGER,"
@@ -127,14 +158,14 @@
                 + "STATUS TEXT,"
                 + " added_on BLOB)", []);
         });
-         
+
     }
 
     app.createtablecustomerqa = function () {
         var db = app.db;
 
         db.transaction(function (tx) {
-          //  tx.executeSql("DROP TABLE sl_SURVEY_CUSTOMER_TEST_QA_INFO", []);
+            //  tx.executeSql("DROP TABLE sl_SURVEY_CUSTOMER_TEST_QA_INFO", []);
             tx.executeSql("CREATE TABLE IF NOT EXISTS sl_SURVEY_CUSTOMER_TEST_QA_INFO(ID INTEGER PRIMARY KEY ASC,"
                 + "CUSTOMER_TEST_INFO_ID INTEGER,"
                 + "QUESTION_MASTER_ID INTEGER,"
@@ -144,7 +175,7 @@
         });
     }
 
-    
+
 
     app.addtocustomerinfor = function (store_master_id, test_id, cname, cemail, cmobile) {
         app.db.transaction(function (tx) {
@@ -156,10 +187,10 @@
                           app.onError);
         });
     }
-      
-    app.addtocustomerqainfor = function (customer_test_info_id,question_master_id, question_option_master_id, question_option_value) {
+
+    app.addtocustomerqainfor = function (customer_test_info_id, question_master_id, question_option_master_id, question_option_value) {
         app.db.transaction(function (tx) {
-            var addedOn = new Date(); 
+            var addedOn = new Date();
             tx.executeSql("INSERT INTO sl_SURVEY_CUSTOMER_TEST_QA_INFO(CUSTOMER_TEST_INFO_ID,QUESTION_MASTER_ID,QUESTION_OPTION_MASTER_ID ,QUESTION_OPTION_VALUE,added_on) "
                 + " VALUES (?,?,?,?,?)",
                           [customer_test_info_id, question_master_id, question_option_master_id, question_option_value, addedOn],
@@ -178,7 +209,7 @@
     };
 
     app.deletecustomertestrecords = function () {
-        app.db.transaction(function (tx) { 
+        app.db.transaction(function (tx) {
             tx.executeSql("delete from sl_SURVEY_CUSTOMER_TEST_INFO ", [],
                           app.onSuccess,
                           app.onError);
@@ -209,30 +240,33 @@
                           fn,
                           app.onError);
         });
-    } 
+    }
 
     app.onError = function (tx, e) {
         alert(e.message);
-        console.log("Error: " + e.message); 
-      //  app.hideOverlay();
+        console.log("Error: " + e.message);
+        //  app.hideOverlay();
     }
 
     app.onSuccess = function (tx, r) {
-       // console.log("Your SQLite query was successful!");
-       // app.refresh();
-       // app.hideOverlay();
+        // console.log("Your SQLite query was successful!");
+        // app.refresh();
+        // app.hideOverlay();
     }
 
     // create customer information for storing customer test details end 
 
-    
+
 
 }(window));
 
-function app_dbinit()
-{
+function app_dbinit() {
+    app.checkconnection();
     app.openDb();
+    app.createtablecustomer();
+    app.createtablecustomerqa();
 }
+
 
 // START_CUSTOM_CODE_kendoUiMobileApp
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes

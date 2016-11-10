@@ -1,10 +1,6 @@
-/// <reference path="../../scripts/jquery.linq-vsdoc.js" />
-'use strict';
-
+'use strict'; 
 app.feedbackformView = kendo.observable({
-    onShow: function () {
-        app_dbinit();
-        app.createtablecustomerqa();
+    onShow: function () { 
         localStorage.setItem("customerid", 1); 
     },
     afterShow: function () {
@@ -13,8 +9,7 @@ app.feedbackformView = kendo.observable({
         $("#btnnext").text('Next');
         var defaultquestion = 0;
         fun_displayquestion(defaultquestion);
-        getlastcustomerid();
-       // hideLoader();
+        getlastcustomerid(); 
     },
      
 
@@ -29,12 +24,12 @@ app.feedbackformView = kendo.observable({
         if (question_type == "Email-Address") {
             inputvalue = $("#txtmailaddres").val();
             if (inputvalue == "") {
-                $("#h3errormessage").html('Enter Email Address!');
+                $("#h3errormessage").html('Enter email address!');
                 $("#modalview-error").kendoMobileModalView("open");
                 return;
             }
             else if (!checkmail(inputvalue)) {
-                $("#h3errormessage").html('Enter valid Email Address!');
+                $("#h3errormessage").html('Enter valid email address!');
                 $("#modalview-error").kendoMobileModalView("open");
                 return;
             } else {
@@ -44,7 +39,7 @@ app.feedbackformView = kendo.observable({
         else if (question_type == "Text-SingleLine") {
             inputvalue = $("#textsingleline").val();
             if (inputvalue == "") {
-                $("#h3errormessage").html('Enter the value!');
+                $("#h3errormessage").html('Enter your answer!');
                 $("#modalview-error").kendoMobileModalView("open");
                 return;
             }
@@ -56,7 +51,7 @@ app.feedbackformView = kendo.observable({
             $("#dvtextmultiline").show();
             inputvalue = $("#textmultiline").val();
             if (inputvalue == "") {
-                $("#h3errormessage").html('Enter the value!');
+                $("#h3errormessage").html('Enter your answer!');
                 $("#modalview-error").kendoMobileModalView("open");
                 return;
             }
@@ -83,12 +78,12 @@ app.feedbackformView = kendo.observable({
         else if (question_type == "Pincode") {
             inputvalue = $("#txtpincode").val();
             if (inputvalue == "") {
-                $("#h3errormessage").html('Enter Pin Code!');
+                $("#h3errormessage").html('Enter pin code!');
                 $("#modalview-error").kendoMobileModalView("open");
                 return;
             }
             else if (!checkPincode(inputvalue)) {
-                $("#h3errormessage").html('Enter valid Pin Code!');
+                $("#h3errormessage").html('Enter valid pin code!');
                 $("#modalview-error").kendoMobileModalView("open");
                 return;
             }
@@ -241,10 +236,10 @@ function fun_displayquestion(defaultquestion) {
             //Assigning Options 
             var options = Enumerable.From(questiondetails)
                  .Where("$.QUESTION_MASTER_ID==" + objdistinctquestions).ToJSON();
-            $.each(JSON.parse(options), function (i, item) {
-                //alert(i); 
+            $.each(JSON.parse(options), function (i, item) { 
                 $("#dvmultichoice input[type='checkbox']").eq(i).attr('id', item.QUESTION_OPTION_MASTER_ID);
                 $("#dvmultichoice input[type='checkbox']").eq(i).attr('name', questionid);
+                $("#dvmultichoice label").eq(i).attr('for', item.QUESTION_OPTION_MASTER_ID);
                 $("#dvmultichoice input[type='checkbox']").eq(i).attr('value', item.OPTION);
                 $("#dvmultichoice label").eq(i).html(item.OPTION);
             });
@@ -258,6 +253,7 @@ function fun_displayquestion(defaultquestion) {
             $.each(JSON.parse(options), function (i, item) {
                 $("#dvsinglechoice input[type='radio']").eq(i).attr('id', item.QUESTION_OPTION_MASTER_ID);
                 $("#dvsinglechoice input[type='radio']").eq(i).attr('name', questionid);
+                $("#dvsinglechoice label").eq(i).attr('for', item.QUESTION_OPTION_MASTER_ID);
                 $("#dvsinglechoice input[type='radio']").eq(i).attr('value', item.OPTION);
                 $("#dvsinglechoice label").eq(i).html(item.OPTION);
             });

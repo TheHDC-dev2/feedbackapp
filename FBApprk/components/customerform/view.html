@@ -1,40 +1,31 @@
-<div data-role="view" data-title="Customer Form" data-layout="main" data-model="app.customerform" data-show="app.customerform.onShow"
+<div data-role="view" data-title="Customer Form" data-layout="main" 
+     data-model="app.customerform" data-show="app.customerform.onShow"
      data-after-show="app.customerform.afterShow" id="customerformScreen" class="screen">
+    <header data-role="header" class="km-header">
+        <h1>Your Information</h1>
+    </header>
+    <footer data-role="footer"> 
+        <div class="marginTopBottom-10">
+            <div class="hbutton-green"
+               data-bind="events: { click: gotofeedbackform }">Next</div> 
+        </div> 
+    </footer>
     <div id="customerformModel" class="form-view screen__content screen__content--form add-item-view">
-        <form>
-            <ul class="form-content" data-role="listview" data-style="inset">
-                <li class="form-content-item">
-                    <div id="headingField" class="field field--heading">
-                        <h1>Customer Information</h1>
-                    </div>
-                </li>
-                <li class="form-content-item">
-                    <label id="fullnameField" class="field field--text km-label-above km-label-hidden">
-                        &nbsp;
-                        <input id="inputcname" class="textinput" value="rka"
-                               placeholder="Type Full Name here ..." type="text" maxlength="200">
-                    </label>
-                </li>
-                <li class="form-content-item">
-                    <label id="fullnameField" class="field field--text km-label-above km-label-hidden">
-                        &nbsp;
-                        <input id="inputcmail" class="textinput"
-                               placeholder="Type Email here ..." type="email" maxlength="200">
-                    </label>
-                </li>
-                <li class="form-content-item liheight">
-                    <label id="fullnameField" class="field field--text km-label-above km-label-hidden">
-                        &nbsp;
-                        <input id="inputcmobile" class="textinput" value="9003467461"
-                               placeholder="Type Mobile Number here ..." type="number" maxlength="20">
-                    </label>
-                </li>
-            </ul>
-            <div class="button-group">
-                <a class="primary hbutton pull-right" data-role="button"
-                   data-bind="events: { click: gotofeedbackform }">Next</a>
-            </div>
-        </form>
+          <div id="dvinputcname" >
+            <input type="text" id="inputcname" 
+                    onkeyup="return textinputlength(this.value, 200, this.id);" 
+                   placeholder="Enter fullname here* " maxlength="200"/>
+        </div>
+        <div id="dvinputcmail">
+            <input type="email" id="inputcmail" value=""
+                    onkeyup="return textinputlength(this.value, 200, this.id);" 
+                    placeholder="Enter email here"  />
+        </div>
+        <div id="dvinputcmobile"  >
+            <input type="number" 
+                   onkeyup="return textinputlength(this.value, 15, this.id);" 
+                   id="inputcmobile" placeholder="Enter mobile number here*" MaxLength="3" size="3" />
+        </div>
         <!-- START_CUSTOM_CODE_customerformModel -->
         <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
         <!-- END_CUSTOM_CODE_customerformModel -->

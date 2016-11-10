@@ -4,7 +4,17 @@ function closemodalviewerror() {
 function closemodalviewsuccess() {
     $("#modalview-success").kendoMobileModalView("close");
 }
+function timewaiting() {
 
+}
+function producttagscreen(id) {
+    app.mobileApp.navigate("components/producttag/view.html?categoryid=" + id);
+}
+
+function redirecttocustomerdashboard() {
+
+    app.mobileApp.navigate("components/customerdashboard/view.html");
+}
 function validatealphawithspace(testvalue) {
     var expr = /^[a-zA-Z ]+$/;
     return expr.test(testvalue);
@@ -65,70 +75,13 @@ function Trim(t) {
     { if (" " != t.charAt(t.length - 1)) break; t = t.substr(0, t.length - 1) } return t
 }
 
-/* Loading popup start */
-var showButton, interval, loaderElement;
-
-function viewInit(e) {
-    showButton = $("#loading").bind(kendo.support.mouseup, function () {
-        showButton.animate({ opacity: 0 });
-        startLoading();
-    });
-
-   // $("#loading") = kendo.mobile.application.pane.loader.element.find("h2");
-} 
-function hideLoader() {
-    clearInterval(interval);
-    kendo.mobile.application.hideLoading(); //hide loading popup
-    kendo.mobile.application.changeLoadingMessage("Loading...");
-    //alert(loaderElement);
-    $("#spinner").removeClass('loaderHeading');
+function textinputlength(val, max, id) {
+    // alert(val);
+    if (val.length > max) {
+        $("#" + id).val(val.substring(0, max));
+    }
+    else {
+        $("#" + id).val(val);
+    }
 }
-
-function viewHide(e) {
-   // showButton.animate({ opacity: 1 });
-    hideLoader();
-}
-
-function startLoading() { 
-    hideLoader();
-    var seconds = 5;
-
-    $("#loading").addClass('loaderHeading');
-    kendo.mobile.application.changeLoadingMessage(seconds + " seconds left!");
-
-    kendo.mobile.application.showLoading(); //show loading popup
-
-    interval = setInterval(function () {
-        kendo.mobile.application.changeLoadingMessage(--seconds + " seconds left!"); //update text of the loading popup
-
-        if (seconds == 0) {
-           // showButton.animate({ opacity: 1 });
-            hideLoader();
-        }
-    }, 1000);
-}
-/* Loading popup end */
-
-
-// waiting image displaying while ajax request
-//$body = $("body");
-//$(document).on({
-
-//    ajaxStart: function () { $("#spinner").show(); },
-//    ajaxStop: function () { $("#spinner").hide(); },
-
-//});
-//$(document).ready(function () {
-//!function ($) {
-//    $.extend($.fn, {
-//        busyIndicator: function (c) {
-//            b = $(this);
-//            var d = b.find(".k-loading-mask");
-//            c ? d.length || (d = $("<div class='k-loading-mask'><span class='k-loading-text'>Loading...</span><div class='k-loading-image'/><div class='k-loading-color'/></div>").width(b.outerWidth()).height(b.outerHeight()).prependTo(b)) : d && d.remove()
-//        }
-//    });
-//}(jQuery);
-
-//$("#spinner").busyIndicator(true); // show
-//$("#spinner").busyIndicator(false); // hide
-//});
+ 

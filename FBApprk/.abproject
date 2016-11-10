@@ -3,8 +3,8 @@
   "ProjectGuid": "15b63d70-63f3-4af3-b26b-9f5542c37dc9",
   "projectVersion": 1,
   "AppIdentifier": "com.telerik.FBApp",
-  "DisplayName": "FBApp",
-  "Author": "",
+  "DisplayName": "Feedback App",
+  "Author": "Radhakrishnan J",
   "Description": "FBApp",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
@@ -39,6 +39,5 @@
     "ID_RESOLUTION_WVGA",
     "ID_RESOLUTION_WXGA",
     "ID_RESOLUTION_HD720P"
-  ],
-  "CordovaPluginVariables": {}
+  ]
 }

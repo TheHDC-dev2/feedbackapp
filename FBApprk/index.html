@@ -3,9 +3,11 @@
 <head>
     <title></title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
 	style-src 'self' 'unsafe-inline' 'unsafe-eval'  *;media-src 'self'
 	'unsafe-inline' 'unsafe-eval' *;img-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+    
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
     <link href="styles/overrides.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
@@ -13,13 +15,11 @@
     <!-- FOR CUSTOM ICONS,FORM AND OTHERS CSS-->
     <link href="styles/custom.css" rel="stylesheet">
     <script src="cordova.js"></script>
-    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/jquery.min.js"></script> 
     <script src="kendo/js/kendo.mobile.min.js"></script>
-    <!-- FOR CUSTOM ICONS,FORM AND OTHERS JS-->
-    <!--<script src="scripts/kendo.all.min.js"></script>
-     <script src="scripts/custom.js"></script>-->
-
+    <!-- FOR CUSTOM ICONS,FORM AND OTHERS JS--> 
     <script src="scripts/rkutilities.js"></script>
+    <script src="scripts/lazyload.js"></script>
     <script src="scripts/fileHelper.js"></script>
     <script src="scripts/linq.min.js"></script>
     <script src="app.js"></script>
@@ -27,84 +27,64 @@
     <script src="dataProviders/fbapp.js"></script>
 
 </head>
-<body id="kendoUiMobileApp">
-    <div id="loading" data-role="view" class="km-insetcontent" data-init="viewInit"
-         data-hide="viewHide" data-title="Loading Popup" data-use-native-scrolling="true">
-        <h1>
-          radhakrishnanjg</h1> 
-    </div>
-    <script src="components/home/index.js"></script>
-    <script src="components/storedashboard/index.js"></script> 
-    <script src="components/dashboard/index.js"></script>
-    <script src="components/customerform/index.js"></script>
-    <script src="components/feedbackformView/index.js"></script>
-    <script src="components/thankyou/index.js"></script>
-    <script src="components/nofoundmessage/index.js"></script>
-    <script src="components/maincategory/index.js"></script>
-    <script src="components/subcategory/index.js"></script>
+<body id="kendoUiMobileApp"> 
     <script src="components/producttag/index.js"></script>
-    <script src="components/productdetail/index.js"></script>
-    <div data-role="layout" data-id="main">
-        <!--<header data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
-            </div>
-        </header>
-        <footer data-role="footer">
-            <div data-role="tabstrip" id="navigation-container"> <a href="components/home/view.html"
-            data-icon="home">Login</a>
-            <a href="components/formView/view.html" data-icon="bookmarks">Dashboard</a>
-            <a href="components/feedbackformView/view.html" data-icon="bookmarks">Feedback Form</a> </div>
-            <div id="navigation-container-more"
-                style="display: none"> </div>
-        </footer>-->
-        <div id="navigation-show-more-view" data-role="view" data-title="Show More" data-layout="main">
-            <ul data-role="listview" data-style="inset" data-click="app.listViewClick"> </ul>
-        </div>
-        <div data-role="layout" data-id="main-nonav">
-            <header data-role="header">
-                <div data-role="navbar"> <span data-role="view-title"></span> </div>
-            </header>
-            <footer data-role="footer"> </footer>
-        </div>
+    <script src="components/subcategory/index.js"></script>
+    <script src="components/maincategory/index.js"></script>
+    <script src="components/nofoundmessage/index.js"></script>
+    <script src="components/thankyou/index.js"></script>
+    <script src="components/feedbackformView/index.js"></script>
+    <script src="components/customerform/index.js"></script>
+    <script src="components/customerdashboard/index.js"></script>
+    <script src="components/storedashboard/index.js"></script>
+    <script src="components/home/index.js"></script> 
+
+<div data-role="layout" data-id="main">
+        
         <!--  start index html save -->
         <!--  end index html save -->
         <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
-        <div data-role="modalview" id="modalview-error" style="height:170px;margin-top:150px;">
+        <div data-role="modalview" id="modalview-error" style="height:140px !important ;margin-top:150px;">
             <div data-role="header">
                 <div data-role="navbar" >
-                    <div id="modelheader">Error Message </div>
-                    <a data-click="closemodalviewerror" data-role="button" data-align="right" data-icon="close-e"></a>
+                    <div id="modelerrorheader">Error Message </div>
+                    <a data-click="closemodalviewerror" data-role="button" 
+                       data-align="right" > <i class="fa fa-2x fa-close"></i></a>
                 </div>
                 <ul data-role="listview" data-style="inset" id="dverrorbody">
-                    <li>
-                        <!--<span class="km-icon km-speaker-e" > </span> -->
-                        <h3 id="h3errormessage">    </h3>
+                    <li> 
+                        <i class="fa fa-2x fa-warning"></i> 
+                        <span id="h3errormessage"></span>
                     </li>
                 </ul> 
             </div>
         </div>
-        <div data-role="modalview" id="modalview-success" style="height:170px;margin-top:150px;">
+        <div data-role="modalview" id="modalview-success" style="height:140px;margin-top:150px;">
             <div data-role="header">
                 <div data-role="navbar">
-                    <div id="modelheader">success Message </div>
-                    <a data-click="closemodalviewsuccess" data-role="button" data-align="right" data-icon="close-e"></a>
+                    <div id="modelsuccessheader">Success Message </div>
+                    <a data-click="closemodalviewsuccess" data-role="button" 
+                       data-align="right"><i class="fa fa-2x fa-close"></i></a>
                 </div>
-                <ul data-role="listview" data-style="inset" id="dverrorbody">
+                <ul data-role="listview" data-style="inset" id="dvsuccessbody">
                     <li>
-                        <!--<span class="km-icon km-speaker-e" > </span> -->
-                        <h3 id="h3successmessage">    </h3>
+                        <i class="fa fa-2x fa-thumbs-up"></i> 
+                        <span id="h3successmessage"></span>
                     </li>
                 </ul> 
             </div>
         </div>
         <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
         <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
-        <div id="spinner" style="display :none;">
-            <!--<i class="fa fa-spinner fa-spin"></i>-->
-            radhakrishnan
-        </div>
+        
     </div>
-
+<div data-role="layout" data-id="product-layout">
+    <header data-role="header" class="km-header">
+        <a data-role="backbutton" class="quarter-circle-left"> B A C K</a>
+        <a class="quarter-circle-right" data-role="button" onclick="redirecttocustomerdashboard();"> H O M E</a>
+            <h1 id="headermainvalue" class="h1orange" style="padding-left:163px;"></h1>
+          <h3 id="headersubvalue" class="h3orange" style="padding-left:163px;"></h3>
+    </header>
+</div>
 </body>
 </html>

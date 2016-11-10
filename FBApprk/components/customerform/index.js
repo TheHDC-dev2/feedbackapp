@@ -1,38 +1,52 @@
 'use strict';
 app.customerform = kendo.observable({
-    onShow: function () {
-        app_dbinit();
-        app.createtablecustomer();
+    onShow: function () {  
     },
     afterShow: function () {
         $("#inputcname").val('');
         $("#inputcmail").val('');
         $("#inputcmobile").val('');
+        $("#customerformScreen").show();
+
+        $('#dvinputcname').show();
+        $('#dvinputcmail').show();
+        $('#dvinputcmobile').show();
+
+        $(".km-header").show();
     },
-    gotofeedbackform: function () {
+    gotofeedbackform: function (e) {
+        //var view = this.view();
+        //e.view.scroller.reset();
         var fullname = $.trim($("#inputcname").val());
         var email = $.trim($("#inputcmail").val());
         var mobile = $.trim($("#inputcmobile").val());
         var validateflag = true;
         if (fullname == "") {
+            
             $("#h3errormessage").html('Enter fullname!');
             $("#modalview-error").kendoMobileModalView("open");
             validateflag = false;
+            
+
+            
             return;
         }
         else if (fullname.length < 3) {
-            $("#h3errormessage").html('Fullname should be atleast 3 character!');
+           
+            $("#h3errormessage").html('Fullname should be atleast 3 characters!');
             $("#modalview-error").kendoMobileModalView("open");
             validateflag = false;
+           
             return;
         }
-        else if (!validatealphawithspace(fullname)) {
+        else if (!validatealphawithspace(fullname)) { 
             $("#h3errormessage").html('Fullname should be only alphabets and spaces!');
             $("#modalview-error").kendoMobileModalView("open");
+            
             return;
         }
         else if ((email != "") && (!checkmail(email))) {
-            $("#h3errormessage").html('Enter valid Email!');
+            $("#h3errormessage").html('Enter valid email!');
             $("#modalview-error").kendoMobileModalView("open");
             validateflag = false;
             return;
@@ -44,7 +58,7 @@ app.customerform = kendo.observable({
             return;
         }
         else if (mobile.length < 10) {
-            $("#h3errormessage").html('Mobile number should be 10 digits!');
+            $("#h3errormessage").html('Mobile number should be atleast 10 digits!');
             $("#modalview-error").kendoMobileModalView("open");
             validateflag = false;
             return;

@@ -4,15 +4,36 @@
 
         <!-- START_CUSTOM_CODE_customerformModel -->
         <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-        <ul class="form-content" data-role="listview" data-style="inset">
-            <li class="form-content-item">
-                <div style="font-size:32px">
-                    <h1 class="text-center">
-                         <span id="typevalue"></span> information coming soon
-                    </h1>
-                </div>
-            </li>
-        </ul>
+        <header data-role="header" class="km-header">
+            <a data-role="backbutton" class="quarter-circle-left"> B A C K</a>
+            <a class="quarter-circle-right" data-role="button" onclick="redirecttocustomerdashboard();"> H O M E</a>
+           </header>
+        <div style="height:800px !important ;" id="dvstartfeedback">
+            <table   align="center" style="padding-top:200px ">
+                <tr>
+                    <td class="text-center "> 
+                        <img src="images/himalayaicons/admin.png" alt="admin image" /> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left ">
+                        <h1 class="text-center ">
+                            <span id="spantypevalue"> </span> <br /> 
+                        </h1>
+                        <div style="font-size:2em ">
+                            <i class="fa fa-2x fa-envelope"></i>  : <b class="horange">
+                                <a href="mailto:radhakrishnan.j@himalayawellness.com">
+                                    radhakrishnan.j@himalayawellness.com
+                                </a>
+                            </b> <br />
+                            <i class="fa fa-2x fa-phone "></i>   :  <b class="horange"> <a href="tel:08067549177"> 080 - 67549177</a></b>
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+         
         <!-- END_CUSTOM_CODE_customerformModel -->
     </div>
     <!-- START_CUSTOM_CODE_customerform -->

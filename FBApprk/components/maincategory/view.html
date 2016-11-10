@@ -1,14 +1,108 @@
-<div data-role="view" data-title="Main Categories" data-layout="main"
+
+
+
+
+<div data-role="view" data-reload="true" data-title="Main Categories" data-layout="main"
      data-model="app.maincategory" data-show="app.maincategory.onShow"
      data-after-show="app.maincategory.afterShow" id="maincategoryScreen" class="screen">
 
+
+    <header data-role="header" class="km-header"> 
+        <a data-role="backbutton" class="quarter-circle-left"> B A C K</a>
+        <a class="quarter-circle-right" data-role="button" onclick="redirecttocustomerdashboard();"> H O M E</a>
+   </header>
+
+    <div class="container"> 
+        <div class="main">
+            <ul class="cbp-ig-grid">
+                <li>
+                    <a  onclick="gotosubcategory(this.id,this.name);" id="53" name="PHARMACEUTICALS">
+                        <span>
+                            <img src="images/himalayaicons/maincategory/pharmaceuticals.png" /></span>
+                        <h2 class="cbp-ig-title">PHARMACEUTICALS</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="gotosubcategory(this.id,this.name);" id="96" name="NUTRITION">
+                        <span>
+                            <img src="images/himalayaicons/maincategory/nutrition.png" />
+                        </span>
+                        <h2 class="cbp-ig-title">NUTRITION</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="gotosubcategory(this.id,this.name);" id="55" name="WELLNESS">
+                        <span>
+                            <img src="images/himalayaicons/maincategory/wellness.png" />
+                        </span>
+                        <h2 class="cbp-ig-title">WELLNESS</h2>
+                        <span class="cbp-ig-category"> </span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="gotosubcategory(this.id,this.name);" id="54" name="PERSONAL CARE">
+                        <span>
+                            <img src="images/himalayaicons/maincategory/personalcare.png" />
+                        </span>
+                        <h2 class="cbp-ig-title">PERSONAL CARE</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="gotosubcategory(this.id,this.name);" id="106" name="HIMALAYA FOR MOMS">
+                        <span>
+                            <img src="images/himalayaicons/maincategory/himalayaformoms.png" />
+                        </span>
+                        <h2 class="cbp-ig-title">HIMALAYA FOR MOMS</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="gotosubcategory(this.id,this.name);" id="56" name="BABY CARE">
+                        <span>
+                            <img src="images/himalayaicons/maincategory/babycare.png" />
+                        </span>
+                        <h2 class="cbp-ig-title">BABY CARE</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick="gotosubcategory(this.id,this.name);" id="57" name="ANIMAL CARE">
+                        <span>
+                            <img src="images/himalayaicons/maincategory/animalcare.png" />
+                        </span>
+                        <h2 class="cbp-ig-title">ANIMAL CARE</h2>
+                        <span class="cbp-ig-category"></span>
+                    </a>
+                </li>
+                <!--<li>
+                    <a href="#">
+                        <span></span>
+                        
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span></span>
+                        
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+    </div>
+
+
+
+
     <!-- START_CUSTOM_CODE_thankyou -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-    <header data-role="header" class="km-header">
+    <!--<header data-role="header" class="km-header">
         <div class="button-group">
-            <a class="primary" data-role="button" href="components/dashboard/view.html"> Back</a>
-            <a class="primary" data-role="button" href="components/dashboard/view.html"> Home</a>
-        </div> 
+            <a class="primary" data-role="backbutton"> Back</a>
+            <a class="primary" data-role="button" href="components/customerdashboard/view.html"> Home</a>
+        </div>
     </header>
     <div class="button-group">
         <a class="primary km-icon km-maincat-e" data-role="button" onclick="gotosubcategory(this.id,this.name);" id="53" name="Pharmaceuticals"> Pharmaceuticals</a>
@@ -22,8 +116,7 @@
         <a class="primary km-icon km-maincat-e" data-role="button" onclick="gotosubcategory(this.id,this.name);" id="57" name="ANIMAL CARE">ANIMAL CARE</a>
         <a>
         </a>
-    </div>
-
+    </div>-->
     <!--<div class="button-group">
         <a data-role="button" class="primary hbutton" data-bind="events: { click: gotodashboard }">Home</a>
         <a data-role="button" class="primary hbutton"  data-bind="events: { click: gotoretest}">Re-Test</a>
